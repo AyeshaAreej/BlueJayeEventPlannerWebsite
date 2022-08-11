@@ -1,15 +1,13 @@
 import React from 'react'
-import {BrowserRouter as Router, Link} from 'react-router-dom';
-import Container from 'react-bootstrap/Container';
+import { Link} from 'react-router-dom';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 import Colors from '../Colors';
 
+
 function Cities() {
 
-
-    
    const  title=["Sukkur", "Karachi", "Lahore", "Islamabad"];
  
   return (
@@ -19,7 +17,7 @@ function Cities() {
           justifyContent:'center', alignItems:'center'}} >
     
     
-    <Row xs={1} md={4} className="g-4" >
+    <Row xs={2} md={4} className="g-4" >
     
     {Array.from({ length: 4 }).map((_, idx) => (
       <Col>

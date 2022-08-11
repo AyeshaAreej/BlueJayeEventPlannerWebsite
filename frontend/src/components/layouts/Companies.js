@@ -5,6 +5,7 @@ import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import Colors from '../Colors';
+import GeneralNav from './GeneralNav';
 // import background from '/images/companybgimage.jpg'
 
 
@@ -15,7 +16,8 @@ function Companies() {
   const  title=["Floral Venues", "Spicy Foods", "Pearl & Mist Decorators", "Soo Events","Floral Venues", "Spicy Foods", "Pearl & Mist Decorators", "Soo Events"];
   return (
     <>
-   
+<GeneralNav/>
+  
     <section  style={{backgroundImage:"url(/images/bg2.jpg)",  width: "100%",  height: "430px",  } }>
     <Container> 
     

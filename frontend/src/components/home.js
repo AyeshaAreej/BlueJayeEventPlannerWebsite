@@ -10,7 +10,7 @@ import MobileApp from './layouts/MobileApp';
 function home() {
   return (
     <>
-    {/* <Header1/> */}
+    <Header1/>
     <Header/>
     <MyCarousel/>
     <GetStarted/>
