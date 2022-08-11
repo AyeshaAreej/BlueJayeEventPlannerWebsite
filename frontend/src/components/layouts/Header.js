@@ -7,12 +7,12 @@ function Header() {
     <>
      
   
-      <Navbar  sticky="top"  variant="dark" style={{backgroundColor:Colors.white}}>
+      <Navbar   variant="dark" style={{backgroundColor:Colors.white}}>
         <Container>
           <Navbar.Brand href="#home" style={{fontSize:28,}}>
             <img
               alt=""
-              src="/images/logo1.png"
+              src="/images/logoheader2.png"
               width="50"
               height="50"
               className="d-inline-block align-top justify-content-end"

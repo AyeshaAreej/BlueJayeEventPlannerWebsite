@@ -14,15 +14,16 @@ function Cities() {
  
   return (
  <>
-   <p style={{ marginLeft:'8%',marginTop:'6%', fontSize:25,color:Colors.primary }}>Find us in these cities, and many more !</p>
-    <div style={{margin:'1%', }}>
+   <p style={{ marginLeft:'2%',marginTop:'6%', fontStyle:'oblique', fontSize:25,color:Colors.primary }}>Find us in these cities, and many more !</p>
+    <div style={{margin:'1%', 
+          justifyContent:'center', alignItems:'center'}} >
     
     
     <Row xs={1} md={4} className="g-4" >
     
     {Array.from({ length: 4 }).map((_, idx) => (
       <Col>
-        <Card style={{borderRadius:25, borderColor:Colors.primary, borderWidth:1, width:'95%'}}
+        <Card style={{borderRadius:25, borderColor:Colors.primary, borderWidth:2, width:'95%'}}
        >
     
         <Link to="/companies">
@@ -30,16 +31,14 @@ function Cities() {
         style={{borderRadius:25, borderColor:Colors.primary, borderWidth:3}}
          variant="top" src="/images/Islamabad.jpg"   /></Link>
         
-
       <Card.Body>
-      <Container>
-      <Row >
-        <Col> <Card.Title>{title[idx]} </Card.Title></Col>
-        <Col> <i style={{color:Colors.primary, Width:130 }}  class='fas fa-arrow-right'>
+      
+      <Card.Title style={{color:Colors.primary, marginLeft:"37%"}}>{title[idx]} </Card.Title>
+      
        
-        </i></Col>
-      </Row>
-      </Container>
+        {/* <Col> <i style={{color:Colors.primary, Width:130 }}  class='fas fa-arrow-right'>
+        </i></Col> */}
+     
       </Card.Body>
     </Card>
    </Col>

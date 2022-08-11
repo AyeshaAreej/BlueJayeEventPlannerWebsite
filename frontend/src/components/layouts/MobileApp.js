@@ -8,15 +8,15 @@ import Colors from '../Colors';
 function MobileApp() {
   return (
     <>
-      <p style={{ marginTop:'6%',marginLeft:'8%', fontSize:25, color:Colors.primary }}>Put us in your pocket</p>
+      <p style={{ marginTop:'6%',marginLeft:'8%', fontStyle:'oblique', fontSize:25, color:Colors.primary }}>Put us in your pocket</p>
     <div style={{backgroundColor:Colors.primary, color:Colors.white , marginBottom:'5%' , height:350}}>
  
     <Container>
    
     <Row >
       <Col xs={6}>
-      <Row  style={{marginTop:'15%', fontSize:27, marginBottom:'3%'}} >Download the food and groceries you love</Row>
-      <Row>It's all at your fingertips – the companies and vendor you want to higher gor your event. Find the right company and vendor to execute your event, and make it unforgetable. Go ahead, download us.</Row>
+      <Row  style={{marginTop:'15%', fontSize:24, marginBottom:'3%'}} >Download the app to make your events memorable.</Row>
+      <Row>It's all at your fingertips – the companies and vendor you want to higher for your event. Find the right company and vendor to execute your event, and make it unforgetable. Go ahead, download us.</Row>
       <Row style={{marginTop:'15%'}}>
       <Col> <Link to="/companies"> 
        <img src="/images/appgalleryicon.png" alt="AppGllery Link"  width="150" height="50" style={{borderRadius:15}}></img>

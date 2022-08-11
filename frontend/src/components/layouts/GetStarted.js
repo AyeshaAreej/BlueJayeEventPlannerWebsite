@@ -5,8 +5,9 @@ import Colors from '../Colors';
 function GetStarted() {
   return (
     <Card className="text-center " style={{marginTop:40, marginLeft:'15%', marginRight:'15%'}}>
-      <Card.Header style={{backgroundColor:Colors.primary, Color:Colors.white, fontStyle:'oblique', fontWeight:"bold"}}>
-      You Organize the Event, we handle the rest</Card.Header>
+      <Card.Header style={{backgroundColor:Colors.primary, color:Colors.white, fontStyle:'oblique', fontSize:25}}>
+  You Organize the Event, we handle the rest
+      </Card.Header>
       <Card.Body>
 
         <Card.Text style={{fontSize:18}}> <span>

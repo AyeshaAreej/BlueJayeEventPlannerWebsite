@@ -20,7 +20,8 @@ function Header1() {
              
             />
             <span style={{color:Colors.white,}} >Do you want to do business with us?</span>
-            <Button style={{marginLeft:10,borderColor:Colors.white, borderWidth:2}} variant="outline-primary">
+            <Button style={{marginLeft:10,borderColor:Colors.white, borderWidth:2}} variant="outline-primary"
+            href="/register">
             
             Register Now</Button>
           </Navbar.Brand>
