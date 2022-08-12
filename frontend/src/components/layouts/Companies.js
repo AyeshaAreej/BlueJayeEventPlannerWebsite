@@ -6,7 +6,6 @@ import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import Colors from '../Colors';
 import GeneralNav from './GeneralNav';
-// import background from '/images/companybgimage.jpg'
 
 
 

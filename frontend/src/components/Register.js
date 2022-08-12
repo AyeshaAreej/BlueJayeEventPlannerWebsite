@@ -1,11 +1,11 @@
 // import '../App.css'
 import Form from 'react-bootstrap/Form';
+import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import InputGroup from 'react-bootstrap/InputGroup';
-import React from 'react'
+import React, { useState } from 'react'
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import Colors from './Colors';
 import GeneralNav from './layouts/GeneralNav';
@@ -14,67 +14,68 @@ import { useForm } from 'react-hook-form';
 
 
 export default function Register() {
-  
+
+  const [type, setType]=useState('none')
   const { register, handleSubmit, watch, formState: { errors } } = useForm()
   const onSubmit = data => console.log(data);
+
+  function handleSelectChange(event) {
+    setType(event.target.value);
+  }
+console.log(type)
+
+ 
 
   return (
     <>
     <GeneralNav/>
-    <section  style={{ backgroundImage:`url(${background})`,  width: "100%",  height: "800px",  } }>
+    <section className='col col-sm-8 col-md-12'  style={{ backgroundImage:`url(${background})`,  width: "100%",  height: "800px",  } }>
 
     <Container >
       <Row>
       {/* 1st column */}
-        <Col xs={4} style={{color:Colors.white, fontWeight:"bold",fontSize:20, marginTop:'20%', marginLeft:'7%'}}>
-        PARTNER WITH US
-        We’re hungry for the best things in life: bringing the best food and redefining the shopping experience to our customers.
-       foodpanda is multi-national, fast-growing business that maintains its appeal as localised service with community ambition.
+        <Col xs={4} style={{color:Colors.white, fontWeight:"bold",fontSize:20, marginTop:'15%', marginLeft:'4%'}}>
+        <h3 style={{marginBottom:'10%'}}> PARTNER WITH US</h3>
+        We aim to get people in touch with event planner companies and companies with vendors to book and execute event successfully.<br/><br/>
+        BlueJay Event Planners is national, fast-growing business that maintains its appeal as localised service with community ambition.
         </Col>
-        <Col style={{backgroundColor:Colors.white, margin:'12%'}}>
-        <InputGroup className="mb-3" style={{marginTop:"5%"}}>
-        <InputGroup.Text id="basic-addon1">@</InputGroup.Text>
-        <Form.Control
-          placeholder="Username"
-          aria-label="Username"
-          aria-describedby="basic-addon1"
-        />
-      </InputGroup>
 
-      <InputGroup className="mb-3">
-        <Form.Control
-          placeholder="Recipient's username"
-          aria-label="Recipient's username"
-          aria-describedby="basic-addon2"
-        />
-        <InputGroup.Text id="basic-addon2">@example.com</InputGroup.Text>
-      </InputGroup>
 
-      <Form.Label htmlFor="basic-url">Your vanity URL</Form.Label>
-      <InputGroup className="mb-3">
-        <InputGroup.Text id="basic-addon3">
-          https://example.com/users/
-        </InputGroup.Text>
-        <Form.Control id="basic-url" aria-describedby="basic-addon3" />
-      </InputGroup>
+        {/* Form  */}
+        
+        <Col  style={{backgroundColor:Colors.white, margin:'11%', borderRadius:8, }}>
+        <h5 style={{margin:'7%'}}>Interested? Fill in the form below to become our partner and increase your revenue!</h5>
+        
 
-      <InputGroup className="mb-3">
-        <InputGroup.Text>$</InputGroup.Text>
-        <Form.Control aria-label="Amount (to the nearest dollar)" />
-        <InputGroup.Text>.00</InputGroup.Text>
-      </InputGroup>
+        <form id='form'  onSubmit={handleSubmit(onSubmit)}>
 
-      <InputGroup style={{marginBottom:"5%"}}>
-        <InputGroup.Text>With textarea</InputGroup.Text>
-        <Form.Control as="textarea" aria-label="With textarea" />
-      </InputGroup>
+        <FloatingLabel  style={{marginTop:"5%", }}  controlId="floatingInput" label="Business Name" className="mb-3">
+        <Form.Control placeholder="Business Name"  aria-label="company_name"  aria-describedby="basic-addon1"  {...register("company_name", { required : true })}   />
+        {errors.company_name?.type === "required" }
+        </FloatingLabel>
+       
+        <FloatingLabel  style={{marginTop:"5%", }}  controlId="floatingInput" label="Email" className="mb-3">
+        <Form.Control placeholder="Email"  aria-label="Email"  aria-describedby="basic-addon1"  {...register("email", { required : true })}   />
+        </FloatingLabel>
 
-        </Col>
-      </Row>
-   
-    </Container>
+        <FloatingLabel controlId="floatingSelect" label="Business Type" style={{Color: Colors.dark}}>
+      <Form.Select value={type} aria-label="Business Type"  onChange={handleSelectChange}>
+        <option>--None--</option>
+        <option value="Company" >Company</option>
+        <option value="Vendor">Vendor</option>
+       
+      </Form.Select>
+    </FloatingLabel>
+
   
-    </section>
+     
+       
+       
+        </form>
+       </Col>
+      </Row>
+    </Container>
+   </section>
     </>
   )
 }

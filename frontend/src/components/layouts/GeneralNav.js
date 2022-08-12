@@ -14,7 +14,7 @@ function GeneralNav() {
     
     <Navbar  sticky="top" variant="dark" style={{backgroundColor:Colors.primary}}>
         <Container>
-          <Navbar.Brand href="#home" style={{fontSize:28,}}>
+          <Navbar.Brand href="/" style={{fontSize:28,}}>
             <img
               alt=""
               src="/images/logo2.1.png"
