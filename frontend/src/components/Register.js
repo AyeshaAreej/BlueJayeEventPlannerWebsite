@@ -1,35 +1,59 @@
 // import '../App.css'
 import Form from 'react-bootstrap/Form';
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
-import InputGroup from 'react-bootstrap/InputGroup';
 import React, { useState } from 'react'
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
 import Colors from './Colors';
 import GeneralNav from './layouts/GeneralNav';
-import { useForm } from 'react-hook-form';
+import { set, useForm } from 'react-hook-form';
  import background from '../assets/v2edited.jpg';
 
 
 export default function Register() {
 
-  const [type, setType]=useState('none')
+  const [type, setType]=useState("")
+  // const [service, setService]=useState("")
+  
   const { register, handleSubmit, watch, formState: { errors } } = useForm()
   const onSubmit = data => console.log(data);
 
   function handleSelectChange(event) {
+  
     setType(event.target.value);
+   
+    
   }
-console.log(type)
+
+console.log("type is",type)
+
+
+
+//dynamic selection of checkbox and radio box
+let option="checkbox"
+  if(type=== "Company")
+  {
+  option="checkbox";
+  console.log("inside company option",  option)
+}
+else if (type=== "Vendor")
+{
+ option="radio"
+  console.log("inside vendor option", option )
+
+}
+ 
+console.log(option)
 
  
 
   return (
     <>
     <GeneralNav/>
-    <section className='col col-sm-8 col-md-12'  style={{ backgroundImage:`url(${background})`,  width: "100%",  height: "800px",  } }>
+    <section className='col col-sm-12 col-md-12'  style={{ backgroundImage:`url(${background})`,  width: "100%",  height: "800px",  } }>
 
     <Container >
       <Row>
@@ -60,12 +84,43 @@ console.log(type)
 
         <FloatingLabel controlId="floatingSelect" label="Business Type" style={{Color: Colors.dark}}>
       <Form.Select value={type} aria-label="Business Type"  onChange={handleSelectChange}>
-        <option>--None--</option>
-        <option value="Company" >Company</option>
+       <option  value="Company" >Company</option>
         <option value="Vendor">Vendor</option>
-       
       </Form.Select>
     </FloatingLabel>
+{/* services */}
+    {[ option ].map((type) => (
+        <div key={`inline-${type}`} className="mb-3">
+          <Form.Check
+            inline
+            label="Venue"
+            name="group1"
+            type={type}
+            id={`inline-${type}-1`}
+          />
+          <Form.Check
+            inline
+            label="Decoration"
+            name="group1"
+            type={type}
+            id={`inline-${type}-2`}
+          />
+          <Form.Check
+            inline
+            label="Catering"
+            name="group1"
+            type={type}
+            id={`inline-${type}-3`}
+          />
+           <Form.Check
+            inline
+            label="Photography"
+            name="group1"
+            type={type}
+            id={`inline-${type}-4`}
+          />
+        </div>
+      ))}
 
   
      
