@@ -22,7 +22,7 @@ function Header() {
           
           <Navbar className="justify-content-end" style={{backgroundColor:Colors.white, fontFamily: 'arial ',fontSize:'larger',}}>
           <span style={{color:Colors.primary,marginRight:5}} class="fa fa-user"></span>
-          <a style={{color:Colors.primary}} href="#login">Login</a>
+          <a style={{color:Colors.primary}} href="#login">Admin Login</a>
       
         </Navbar>
         </Container>
