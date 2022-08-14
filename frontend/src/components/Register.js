@@ -11,7 +11,16 @@ import Modal from 'react-bootstrap/Modal';
 import Colors from './Colors';
 import GeneralNav from './layouts/GeneralNav';
 import { set, useForm } from 'react-hook-form';
+//images
  import background from '../assets/bg3.jpg';
+ import step1 from '../assets/pic1.PNG';
+ import Step2 from '../assets/pic2.PNG';
+ import Step3 from '../assets/pic3.PNG';
+ import Step4 from '../assets/pic4.png';
+ import advantage from '../assets/advantage.png';
+ import tic from '../assets/tic.png';
+ 
+
 
 
 export default function Register() {
@@ -189,16 +198,68 @@ const errorsStyle = {
     <h3>Steps to Activation</h3>
 </div>
   
-   <Container>
+   <Container >
+    <Row style={{marginTop:"5%"}}>
+      <Col></Col>
+      <Col><img src={step1} alt="step1" width="50"  height="50" /></Col>
+      <Col><img src={Step3} alt="step2" width="50"  height="50" /></Col>
+      <Col><img src={Step2} alt="step3" width="50"  height="50" /></Col>
+      <Col xs={3}><img src={Step4} alt="step4" width="50"  height="50" /></Col>
+      <Col></Col>
+    </Row>
+
+    <Row style={{marginTop:"2%"}}>
+      <Col></Col>
+      <Col>Step 1:<br/> Register online </Col>
+      <Col xs={2} >Step 2:<br/> BlueJay Event Planners send the contract </Col>
+      <Col>Step 3:<br/> Sign the contract </Col>
+      <Col xs={3} >Step 4:<br/> Go live on BlueJay Event Planner's Mobile app </Col>
+      <Col></Col>
+    </Row>
+   </Container>
+
+   <Container  style={{backgroundColor:Colors.primary, marginTop:"5%", marginBottom:'5%'}}>
     <Row>
-      <Col>
-      <img alt=""
-              src="../assets/pic1.PNG"
-              width="50"
-              height="50"
-              className="d-inline-block"
-            />
-        </Col>
+      <Col ><img src={advantage} alt="step1" width="250"  height="270" style={{marginTop:"5%", marginBottom:'5%', borderRadius:20}} /></Col>  
+      <Col xs={6}>
+        <Row> <Col style={{color:Colors.white, marginTop:"5%", marginBottom:'5%', fontSize:26, fontWeight:"bold"}}> Advantage of Joining us </Col> </Row>
+        <Row> <Col> <img src={tic} alt="tic" width="30" height="30" style={{borderRadius:24, marginRight:'4%'}}/><span style={{color:Colors.white,fontWeight:"bold", fontSize:18}}>More Revenue</span>  <p style={{color:Colors.white,marginLeft:'10%'}}>With BlueJay Event Planners, you will gain an additional source of income.</p> </Col> </Row>
+        <Row> <Col> <img src={tic} alt="tic" width="30" height="30" style={{borderRadius:24, marginRight:'4%'}}/><span style={{color:Colors.white,fontWeight:"bold", fontSize:18}}>Dedicated Support </span> <p style={{color:Colors.white,marginLeft:'10%'}}>From perfecting your services and getting you orders, to improving your performance, we're here to help you every step of the way.</p></Col> </Row>
+    
+      </Col>
+      <Col></Col>
+   </Row>
+   </Container>
+
+
+   {/* Our process */}
+
+   <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', marginTop:'5%', fontWeight:'bold'}}>
+    <h3>How it works</h3>
+</div>
+  
+   <Container >
+    <Row style={{marginTop:"5%"}}>
+     
+      <Col> <img  src="/images/process1.jpg"   width="70"  height="70" alt="step1" /></Col>
+      <Col> <img  src="/images/process2.png"   width="70"  height="70" alt="step1" /></Col>
+      <Col> <img  src="/images/process3.png"   width="70"  height="70" alt="step1" /></Col>
+      <Col> <img  src="/images/process4.jpg"   width="70"  height="70" alt="step1" /></Col>
+     
+    </Row>
+
+    <Row style={{marginTop:"2%"}}>
+
+      <Col >Step 1:<br/> Customer select an available company and fill their booking form.</Col>
+      <Col >Step 2:<br/> Company ask customer to pay advance Company accepts the order, and starts searching vendors for needed services . </Col>
+      <Col >Step 3:<br/> Company highers vendors for services like food, venue and so on </Col>
+      <Col >Step 4:<br/> Company and vendor both together execute the event </Col>
+     
+    </Row>
+    <Row>
+   <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', marginTop:'5%', fontWeight:'bold'}}>
+     <Button href="/register" size="lg" type="submit" style={{ marginBottom:"2%", width:300 ,color:Colors.white, backgroundColor:Colors.primary, borderColor:Colors.primary }}> Get Started</Button>
+    </div> 
     </Row>
    </Container>
     </>
