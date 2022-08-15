@@ -12,8 +12,8 @@ function Cities() {
  
   return (
  <>
-   <p style={{ marginLeft:'2%',marginTop:'6%', fontStyle:'oblique', fontSize:25,color:Colors.primary }}>Find us in these cities, and many more !</p>
-    <div style={{margin:'1%', 
+   <p style={{ marginLeft:'2%',marginTop:'10%', fontStyle:'oblique', fontSize:25,color:Colors.primary }}>Find us in these cities, and many more !</p>
+    <div style={{margin:'1%', marginBottom:"10%",
           justifyContent:'center', alignItems:'center'}} >
     
     
@@ -21,7 +21,7 @@ function Cities() {
     
     {Array.from({ length: 4 }).map((_, idx) => (
       <Col>
-        <Card style={{borderRadius:25, borderColor:Colors.primary, borderWidth:2, width:'95%'}}
+        <Card style={{borderRadius:25, borderWidth:2, width:'95%'}}
        >
     
         <Link to="/companies">

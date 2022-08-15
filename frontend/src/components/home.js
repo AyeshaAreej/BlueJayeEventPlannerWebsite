@@ -19,8 +19,9 @@ function home() {
     <Header/>
     <MyCarousel/>
     <GetStarted/>
-    <Cities/>
-    <MobileApp/>
+
+    <MobileApp/>   
+   
 
      {/* Our process */}
 
@@ -46,12 +47,10 @@ function home() {
       <Col >Step 4:<br/> Company and vendor both together execute the event </Col>
      
     </Row>
-    <Row>
-   <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', marginTop:'5%', fontWeight:'bold'}}>
-     <Button  href="/register" size="lg" type="submit" style={{ marginBottom:"2%", width:300 ,color:Colors.white, backgroundColor:Colors.primary, borderColor:Colors.primary }}> Get Started</Button>
-    </div> 
-    </Row>
+   
    </Container>
+
+   <Cities/>
       
     </>
   )

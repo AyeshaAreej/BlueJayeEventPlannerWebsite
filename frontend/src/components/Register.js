@@ -1,16 +1,15 @@
-// import '../App.css'
+
+import React, { useState } from 'react'
+import { set, useForm } from 'react-hook-form';
+import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
-import React, { useState } from 'react'
-import Alert from 'react-bootstrap/Alert';
-import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
-import Modal from 'react-bootstrap/Modal';
 import Colors from './Colors';
 import GeneralNav from './layouts/GeneralNav';
-import { set, useForm } from 'react-hook-form';
+
 //images
  import background from '../assets/bg3.jpg';
  import step1 from '../assets/pic1.PNG';
@@ -26,15 +25,16 @@ import { set, useForm } from 'react-hook-form';
 export default function Register() {
 
   const [type, setType]=useState(null) ;
+  const [services, setServices] = useState([])
   
-  
+  let service=[];
   const { register, handleSubmit, watch, formState: { errors } } = useForm()
   const onSubmit = data => console.log(data);
 
 
-
+//type is role vendor or company
 console.log("type is",type)
-
+console.log("services are",service)
 
 
 //dynamic selection of checkbox and radio box
@@ -111,30 +111,38 @@ const errorsStyle = {
           <Form.Check
             inline
             label="Venue"
+            value="venue"
             name="group1"
             type={type}
             id={`inline-${type}-1`}
+            onChange={(e) =>{ setServices( services.concat(e.target.value))}}
           />
           <Form.Check
             inline
             label="Decoration"
             name="group1"
+            value="decoration"
             type={type}
             id={`inline-${type}-2`}
+            onChange={(e) =>{ setServices( services.concat(e.target.value))}}
           />
           <Form.Check
             inline
             label="Catering"
             name="group1"
+            value="catering"
             type={type}
             id={`inline-${type}-3`}
+            onChange={(e) =>{ setServices( services.concat(e.target.value))}}
           />
            <Form.Check
             inline
             label="Photography"
             name="group1"
+            value="photography"
             type={type}
             id={`inline-${type}-4`}
+            onChange={(e) =>{ setServices( services.concat(e.target.value))}}
           />
         </div>
       ))}
@@ -145,7 +153,7 @@ const errorsStyle = {
         <div style={errorsStyle}> {errors.password?.type === "minLength" && "At least 6 characters are required"}</div>
         </FloatingLabel>
 
-        <FloatingLabel  style={{marginTop:"2%", }}  controlId="floatingInput " label="phone_no" className="mb-3" >
+        <FloatingLabel  style={{marginTop:"2%", }}  controlId="floatingInput " label="Phone Number" className="mb-3" >
         <Form.Control  type="number"  placeholder="Phone Number"  aria-label="Phone Number"  aria-describedby="basic-addon1"  {...register("phone_no", { required : true , minLength: 11, maxLength:12 })}   />
         <div style={errorsStyle}>{errors.phone_no?.type === "required"  && "Phone number is required" }</div>
         <div style={errorsStyle}>{errors.phone_no?.type === "minLength"  && "At least 11 characters are required" }</div>
@@ -200,21 +208,21 @@ const errorsStyle = {
   
    <Container >
     <Row style={{marginTop:"5%"}}>
-      <Col></Col>
+     
       <Col><img src={step1} alt="step1" width="50"  height="50" /></Col>
       <Col><img src={Step3} alt="step2" width="50"  height="50" /></Col>
       <Col><img src={Step2} alt="step3" width="50"  height="50" /></Col>
-      <Col xs={3}><img src={Step4} alt="step4" width="50"  height="50" /></Col>
-      <Col></Col>
+      <Col><img src={Step4} alt="step4" width="50"  height="50" /></Col>
+      
     </Row>
 
     <Row style={{marginTop:"2%"}}>
-      <Col></Col>
+
       <Col>Step 1:<br/> Register online </Col>
-      <Col xs={2} >Step 2:<br/> BlueJay Event Planners send the contract </Col>
+      <Col >Step 2:<br/> BlueJay Event Planners send the contract </Col>
       <Col>Step 3:<br/> Sign the contract </Col>
-      <Col xs={3} >Step 4:<br/> Go live on BlueJay Event Planner's Mobile app </Col>
-      <Col></Col>
+      <Col >Step 4:<br/> Go live on BlueJay Event Planner's Mobile app </Col>
+    
     </Row>
    </Container>
 

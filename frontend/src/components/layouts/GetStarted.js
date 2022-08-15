@@ -21,7 +21,7 @@ function GetStarted() {
       {/* <Card.Footer className="text-muted" style={{backgroundColor:Colors.white}}> */}
         <div style={{ justifyContent:'center', alignItems:'center' }}>
         <Button 
-         href='#register'
+         href='/register'
          style={{borderColor:Colors.white, borderRadius:25, backgroundColor:Colors.primary, borderWidth:4, width:'20%' ,}}>
          Get Started</Button>
          </div>
