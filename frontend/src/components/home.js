@@ -10,6 +10,7 @@ import MyCarousel from '../components/layouts/MyCarousel';
 import GetStarted from '../components/layouts/GetStarted';
 import Cities from '../components/layouts/Cities';
 import MobileApp from './layouts/MobileApp';
+import Footer from './layouts/Footer';
 
 
 function home() {
@@ -51,6 +52,7 @@ function home() {
    </Container>
 
    <Cities/>
+   <Footer/>
       
     </>
   )

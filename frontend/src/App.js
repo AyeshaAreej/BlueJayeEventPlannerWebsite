@@ -1,10 +1,11 @@
-// import './App.css';
 import Footer from './components/layouts/Footer';
 import Home from './components/home';
 import Register from './components/Register';
 import Companies from './components/layouts/Companies';
 import AdminLogin from './components/AdminLogin';
 import { Routes, Route } from 'react-router-dom';
+import MyDashboard from './dashboard/MyDashboard';
+
 
 
 
@@ -16,10 +17,13 @@ function App() {
           
            <Route  path='/register' element={<Register/>} />
            <Route  path='/companies' element={<Companies/>} />
-           <Route  path='/login' element={<AdminLogin/>} />
+           <Route  path='/login' element={<AdminLogin/>}/>
+           <Route  path='/dashboard' element={<MyDashboard/>}/>
+          
+         
      </Routes>
 
-    <Footer/>
+   
     </>
   );
 }

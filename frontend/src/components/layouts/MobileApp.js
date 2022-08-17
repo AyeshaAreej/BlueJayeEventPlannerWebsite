@@ -4,12 +4,13 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Colors from '../Colors';
+import '../../Login.css'
 
 function MobileApp() {
   return (
     <>
       <p style={{ marginTop:'6%',marginLeft:'8%', fontStyle:'oblique', fontSize:25, color:Colors.primary }}>Put us in your pocket</p>
-    <section style={{backgroundColor:Colors.primary, color:Colors.white , marginBottom:'5%' , height:350}}>
+    <section  style={{backgroundColor:"#d176d0", color:Colors.white , marginBottom:'5%' , height:350}}>
  
     <Container>
    

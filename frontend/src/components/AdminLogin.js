@@ -53,11 +53,13 @@ function AdminLogin() {
                             
                             
           <button type="submit" id="sub_butt" style={{marginLeft:'8%'}}>Login</button>
+      
            </form>
            )}
            </Formik>  
         
            <div className="footer">
+           
                 <h4  style={{marginLeft:'8%'}}>Forgot Password? <Link className='link' to='#forgotpass'>Click Here</Link></h4>
            </div>
             </div>
@@ -72,6 +74,7 @@ function AdminLogin() {
 
                 </div>
         </div>
+        {/* <a href="/dashboard">Dashboard</a> */}
     </>
   )
 }
