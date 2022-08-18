@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Table from 'react-bootstrap/Table';
 
 export default class Dashboard extends Component {
     render() {
@@ -125,7 +126,7 @@ export default class Dashboard extends Component {
            
             {/*/.direct-chat */}
             {/* TO DO List */}
-            <div className="card" style={{width:1050}}>
+            <div className="card"  style={{width:'100%'}}>
               <div className="card-header">
                 <h3 className="card-title">
                   <i className="ion ion-clipboard mr-1" />
@@ -142,151 +143,134 @@ export default class Dashboard extends Component {
                 </div>
               </div>
               {/* /.card-header */}
-              <div className="card-body">
-                <ul className="todo-list" data-widget="todo-list">
-                  <li>
-                    {/* drag handle */}
-                    <span className="handle">
-                      <i className="fas fa-ellipsis-v" />
-                      <i className="fas fa-ellipsis-v" />
-                    </span>
-                    {/* checkbox */}
-                    <div className="icheck-primary d-inline ml-2">
-                      <input type="checkbox" defaultValue name="todo1" id="todoCheck1" />
-                      <label htmlFor="todoCheck1" />
-                    </div>
-                    {/* todo text */}
-                    <span className="text">Design a nice theme</span>
-                    {/* Emphasis label */}
-                    <small className="badge badge-danger"><i className="far fa-clock" /> 2 mins</small>
-                    {/* General tools such as edit or delete*/}
-                    <div className="tools">
-                      <i className="fas fa-edit" />
-                      <i className="fas fa-trash-o" />
-                    </div>
-                  </li>
-                  <li>
-                    <span className="handle">
-                      <i className="fas fa-ellipsis-v" />
-                      <i className="fas fa-ellipsis-v" />
-                    </span>
-                    <div className="icheck-primary d-inline ml-2">
-                      <input type="checkbox" defaultValue name="todo2" id="todoCheck2" defaultChecked />
-                      <label htmlFor="todoCheck2" />
-                    </div>
-                    <span className="text">Make the theme responsive</span>
-                    <small className="badge badge-info"><i className="far fa-clock" /> 4 hours</small>
-                    <div className="tools">
-                      <i className="fas fa-edit" />
-                      <i className="fas fa-trash-o" />
-                    </div>
-                  </li>
-                  <li>
-                    <span className="handle">
-                      <i className="fas fa-ellipsis-v" />
-                      <i className="fas fa-ellipsis-v" />
-                    </span>
-                    <div className="icheck-primary d-inline ml-2">
-                      <input type="checkbox" defaultValue name="todo3" id="todoCheck3" />
-                      <label htmlFor="todoCheck3" />
-                    </div>
-                    <span className="text">Let theme shine like a star</span>
-                    <small className="badge badge-warning"><i className="far fa-clock" /> 1 day</small>
-                    <div className="tools">
-                      <i className="fas fa-edit" />
-                      <i className="fas fa-trash-o" />
-                    </div>
-                  </li>
-                  <li>
-                    <span className="handle">
-                      <i className="fas fa-ellipsis-v" />
-                      <i className="fas fa-ellipsis-v" />
-                    </span>
-                    <div className="icheck-primary d-inline ml-2">
-                      <input type="checkbox" defaultValue name="todo4" id="todoCheck4" />
-                      <label htmlFor="todoCheck4" />
-                    </div>
-                    <span className="text">Let theme shine like a star</span>
-                    <small className="badge badge-success"><i className="far fa-clock" /> 3 days</small>
-                    <div className="tools">
-                      <i className="fas fa-edit" />
-                      <i className="fas fa-trash-o" />
-                    </div>
-                  </li>
-                  <li>
-                    <span className="handle">
-                      <i className="fas fa-ellipsis-v" />
-                      <i className="fas fa-ellipsis-v" />
-                    </span>
-                    <div className="icheck-primary d-inline ml-2">
-                      <input type="checkbox" defaultValue name="todo5" id="todoCheck5" />
-                      <label htmlFor="todoCheck5" />
-                    </div>
-                    <span className="text">Check your messages and notifications</span>
-                    <small className="badge badge-primary"><i className="far fa-clock" /> 1 week</small>
-                    <div className="tools">
-                      <i className="fas fa-edit" />
-                      <i className="fas fa-trash-o" />
-                    </div>
-                  </li>
-                  <li>
-                    <span className="handle">
-                      <i className="fas fa-ellipsis-v" />
-                      <i className="fas fa-ellipsis-v" />
-                    </span>
-                    <div className="icheck-primary d-inline ml-2">
-                      <input type="checkbox" defaultValue name="todo6" id="todoCheck6" />
-                      <label htmlFor="todoCheck6" />
-                    </div>
-                    <span className="text">Let theme shine like a star</span>
-                    <small className="badge badge-secondary"><i className="far fa-clock" /> 1 month</small>
-                    <div className="tools">
-                      <i className="fas fa-edit" />
-                      <i className="fas fa-trash-o" />
-                    </div>
-                  </li>
-                </ul>
-              </div>
-              {/* /.card-body */}
-              <div className="card-footer clearfix">
-                <button type="button" className="btn btn-info float-right"><i className="fas fa-plus" /> Add item</button>
-              </div>
-            </div>
+              <div>
+                <ul >
+                <Table striped bordered hover variant="light">
+        <thead>
+        <tr>
+          <th>#</th>
+          <th>Business Name </th>
+          <th>Business Type</th>
+          <th>Date</th>
+          <th>Status</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Floral Weddings</td>
+          <td>Company</td>
+          <td>18-8-2022</td>
+          <td>Approved</td>
+          <td><a style={{color:'blue' }} href="#/deatils">Details</a></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Spice Foods</td>
+          <td>Vendor</td>
+          <td>16-8-2022</td>
+          <td>Pending</td>
+          <td><a style={{color:'blue' }} href="#/deatils">Details</a></td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Royal Photographers</td>
+          <td>Vendor</td>
+          <td>16-8-2022</td>
+          <td>Rejected</td>
+          <td><a style={{color:'blue' }} href="#/deatils">Details</a></td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Cocktail Parties</td>
+          <td>Company</td>
+          <td>15-8-2022</td>
+          <td>Approved</td>
+          <td><a style={{color:'blue' }} href="#/deatils">Details</a></td>
+        </tr>
+      </tbody>
+    </Table>
+ </ul>
+ </div>
+ </div>
             {/* /.card */}
           </section>
           {/* /.Left col */}
           {/* right col (We are only adding the ID to make the widgets sortable)*/}
-          <section className="col-lg-5 connectedSortable">
-           {/* Map card */}
-            <div >
-              
-            
-              {/* /.card-body*/}
-              <div className="card-footer bg-transparent">
+          <section className="col-lg-5 ">
+
+          {/* Map card  Extra code*/}
+          <div ><div >
                 <div className="row">
                   <div className="col-4 text-center">
                     <div id="sparkline-1" />
-                 
-                  </div>
-                  {/* ./col */}
-                  <div className="col-4 text-center">
+                    </div>
+                 <div className="col-4 text-center">
                     <div id="sparkline-2" />
-                   
                   </div>
-                  {/* ./col */}
-                  <div className="col-4 text-center">
-                    <div id="sparkline-3" />
-                  
-                  </div>
-                  {/* ./col */}
-                </div>
-                {/* /.row */}
+                 <div className="col-4 text-center">
+                    <div id="sparkline-3" /> </div>  </div>   </div>  </div>
+
+              {/* TO DO List */}
+              <div  className="card bg-gradient-primary" style={{width:'100%'}}>
+              <div className="card-header">
+                <h3 className="card-title">
+                  <i className="ion ion-clipboard mr-1" />
+                  Top Companies & Vendors
+                </h3>
+               
               </div>
-            </div>
+              {/* /.card-header */}
+              <div>
+                <ul >
+                <Table striped bordered hover variant="gray">
+        <thead>
+        <tr>
+          <th>#</th>
+          <th>Business Name </th>
+          <th>Total Orders</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Floral Weddings</td>
+          <td>400</td>
+          </tr>
+        <tr>
+          <td>2</td>
+          <td>Spice Foods</td>
+          <td>350</td>
+         </tr>
+        <tr>
+          <td>3</td>
+          <td>Royal Photographers</td>
+          <td>200</td>
+      </tr>
+     
+        <tr>
+          <td>4</td>
+          <td>Heaven Venue</td>
+          <td>180</td>
+      </tr>
+   
+        <tr>
+          <td>5</td>
+          <td>Royal Weddings</td>
+          <td>150</td>
+      </tr>
+      
+      
+      </tbody>
+    </Table>
+ </ul>
+ </div>
+ </div>
 
             {/* /.card */}
             {/* Calendar */}
-            <div className="card bg-gradient-success" style={{height:'39%'}}>
+            <div className="card bg-gradient-success" style={{height:'38%', marginTop:'20%'}}>
               <div className="card-header border-0">
                 <h3 className="card-title">
                   <i className="far fa-calendar-alt" />
