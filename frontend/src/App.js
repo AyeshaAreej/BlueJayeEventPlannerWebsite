@@ -6,6 +6,8 @@ import AdminLogin from './components/AdminLogin';
 import { Routes, Route } from 'react-router-dom';
 import MyDashboard from './dashboard/MyDashboard';
 import NewRegistrations from './dashboard/NewRegistrations';
+import AllCompanies from './dashboard/AllCompanies';
+
 
 
 
@@ -20,16 +22,9 @@ function App() {
            <Route  path='companies' element={<Companies/>} />
            <Route  path='login' element={<AdminLogin/>}/>
            <Route  path='dashboard' element={<MyDashboard/>}/>
-
-         
-         
-         
            <Route  exact path='dashboard/new' element={<NewRegistrations/>}/>
-          
-           
-     
-          
-         
+           <Route  exact path='dashboard/allCompanies' element={ <AllCompanies/> }/>
+             
      </Routes>
 
    

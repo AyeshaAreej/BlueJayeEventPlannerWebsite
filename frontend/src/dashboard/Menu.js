@@ -46,7 +46,7 @@ export default class Menu extends Component {
             </ul>
           </li>
           <li className="nav-item">
-                <a href="dashboard/new" className="nav-link">
+                <a href="dashboard/allCompanies" className="nav-link">
                 <FontAwesomeIcon icon={ faBuildingCircleCheck  } className="nav-icon"/>
                 <p>Companies</p>
                 </a>
@@ -84,35 +84,7 @@ export default class Menu extends Component {
               </p>
             </a>
           </li>
-          <li className="nav-item has-treeview">
-            <a href="#" className="nav-link">
-              <i className="nav-icon far fa-envelope" />
-              <p>
-                Mailbox
-                <i className="fas fa-angle-left right" />
-              </p>
-            </a>
-            <ul className="nav nav-treeview">
-              <li className="nav-item">
-                <a href="pages/mailbox/mailbox.html" className="nav-link">
-                  <i className="far fa-circle nav-icon" />
-                  <p>Inbox</p>
-                </a>
-              </li>
-              <li className="nav-item">
-                <a href="pages/mailbox/compose.html" className="nav-link">
-                  <i className="far fa-circle nav-icon" />
-                  <p>Compose</p>
-                </a>
-              </li>
-              <li className="nav-item">
-                <a href="pages/mailbox/read-mail.html" className="nav-link">
-                  <i className="far fa-circle nav-icon" />
-                  <p>Read</p>
-                </a>
-              </li>
-            </ul>
-          </li>
+         
           <li className="nav-item has-treeview">
             <a href="#" className="nav-link">
               <i className="nav-icon fas fa-book" />

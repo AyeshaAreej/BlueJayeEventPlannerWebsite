@@ -4,7 +4,7 @@ import Menu from './Menu';
 import Button from 'react-bootstrap/Button';
 
 
-function NewRegistrations() {
+function AllCompanies() {
   return (
     <>
     {/* <Header/> */}
@@ -23,7 +23,7 @@ function NewRegistrations() {
               <div className="card-header">
                 <h3 className="card-title">
                   <i className="ion ion-clipboard mr-1" />
-                  New Registrations
+                 Registered Companies
                 </h3>
               </div>
               {/* /.card-header */}
@@ -33,14 +33,15 @@ function NewRegistrations() {
         <thead>
         <tr   >
           <th>#</th>
-          <th style={{width:'17%'}}>Business Name </th>
-          <th style={{width:'20%'}}>Business Type</th>
+          <th style={{width:'15%'}}>Business Name </th>
+          <th style={{width:'18%'}}>Business Type</th>
           <th >City</th>
-          <th style={{width:'17%'}}>Price Range</th>
-          <th style={{width:'24%'}}>Services</th>
-          <th style={{width:'17%'}}>Date</th>
+          <th style={{width:'14%'}}>Price Range</th>
+          <th style={{width:'22%'}}>Services</th>
+          <th style={{width:'14%'}}>Date</th>
+          <th style={{width:'16%'}}>Total Orders</th>
           <th >Action</th>
-          <th></th>
+         
          
         </tr>
       </thead>
@@ -53,11 +54,12 @@ function NewRegistrations() {
           <td>Above 1500000</td>
           <td>Venue Decoration Photography Catering</td>
           <td>16-8-2022</td>
+          <td>500</td>
           <td>
            <Button style={{width:80,margin:2}} variant="success">Accept</Button>
            <Button style={{width:80,margin:2}}variant="danger">Reject</Button>
           </td>
-          <td><a style={{color:'blue' }} href="#/deatils">Details</a></td>
+        
          
        
         </tr>
@@ -69,11 +71,11 @@ function NewRegistrations() {
           <td>Above 100000</td>
           <td>Catering</td>
           <td>16-8-2022</td>
+          <td>400</td>
           <td>
            <Button style={{width:80,margin:2}} variant="success">Accept</Button>
            <Button style={{width:80,margin:2}}variant="danger">Reject</Button>
           </td>
-          <td><a style={{color:'blue' }} href="#/deatils">Details</a></td>
         </tr>
         <tr>
           <td>3</td>
@@ -83,11 +85,11 @@ function NewRegistrations() {
           <td>Above 150000</td>
           <td>Photography</td>
           <td>16-8-2022</td>
+          <td>300</td>
           <td>
            <Button style={{width:80,margin:2}} variant="success">Accept</Button>
            <Button style={{width:80,margin:2}}variant="danger">Reject</Button>
           </td>
-          <td><a style={{color:'blue' }} href="#/deatils">Details</a></td>
         </tr>
         <tr>
           <td>4</td>
@@ -97,11 +99,12 @@ function NewRegistrations() {
           <td>Above 600000</td>
           <td>Venue</td>
           <td>15-8-2022</td>
+          <td>200</td>
           <td>
            <Button style={{width:80,margin:2}} variant="success">Accept</Button>
            <Button style={{width:80,margin:2}}variant="danger">Reject</Button>
           </td>
-          <td><a style={{color:'blue' }} href="#/deatils">Details</a></td>
+          
         </tr>
       </tbody>
     </Table>
@@ -116,4 +119,4 @@ function NewRegistrations() {
     )
 }
 
-export default NewRegistrations
+export default AllCompanies
