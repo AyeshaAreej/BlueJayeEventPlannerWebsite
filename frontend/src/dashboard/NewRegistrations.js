@@ -1,12 +1,32 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Table from 'react-bootstrap/Table';
 import Menu from './Menu';
 import Button from 'react-bootstrap/Button';
+import { useNavigate } from 'react-router-dom';
+
 
 
 function NewRegistrations() {
+  
+  const navigate = useNavigate();
+
+const HandleClick=()=>{
+
+  let role="vendor"
+ 
+  if (role==="company"){
+  navigate('/CompanyDetails');
+  }
+  else if (role==="vendor"){
+    navigate('/VendorDetails');
+  }
+}
+
+
+
   return (
     <>
+    
     {/* <Header/> */}
     <div >
     <nav className="main-header navbar navbar-expand navbar-white navbar-light">
@@ -57,7 +77,7 @@ function NewRegistrations() {
            <Button style={{width:80,margin:2}} variant="success">Accept</Button>
            <Button style={{width:80,margin:2}}variant="danger">Reject</Button>
           </td>
-          <td><a style={{color:'blue' }} href="#/deatils">Details</a></td>
+          <td><button style={{color:'blue' }}  onClick={HandleClick} >Details</button></td>
          
        
         </tr>

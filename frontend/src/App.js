@@ -7,6 +7,8 @@ import { Routes, Route } from 'react-router-dom';
 import MyDashboard from './dashboard/MyDashboard';
 import NewRegistrations from './dashboard/NewRegistrations';
 import AllCompanies from './dashboard/AllCompanies';
+import VendorDetails from './dashboard/VendorDetails';
+import CompanyDetails from './dashboard/CompanyDetails';
 
 
 
@@ -22,8 +24,10 @@ function App() {
            <Route  path='companies' element={<Companies/>} />
            <Route  path='login' element={<AdminLogin/>}/>
            <Route  path='dashboard' element={<MyDashboard/>}/>
-           <Route  exact path='dashboard/new' element={<NewRegistrations/>}/>
-           <Route  exact path='dashboard/allCompanies' element={ <AllCompanies/> }/>
+           <Route  path='dashboard/new' element={<NewRegistrations/>}/>
+           <Route  path='dashboard/allCompanies' element={ <AllCompanies/> }/>
+           <Route  path='CompanyDetails' element={ <CompanyDetails/> }/>
+           <Route  path='VendorDetails' element={ <VendorDetails/> }/>
              
      </Routes>
 
