@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import Table from 'react-bootstrap/Table';
 import Menu from './Menu';
+import Header from './Header';
 import Button from 'react-bootstrap/Button';
 import { useNavigate } from 'react-router-dom';
 
@@ -26,17 +27,10 @@ const HandleClick=()=>{
 
   return (
     <>
-    
-    {/* <Header/> */}
+    <Header/>
+   
     <div >
-    <nav className="main-header navbar navbar-expand navbar-white navbar-light">
-    {/* Left navbar links */}
-    <ul className="navbar-nav">
-      <li className="nav-item">
-        <a className="nav-link" data-widget="pushmenu" href="#" ><i className="fas fa-bars" /></a>
-      </li></ul></nav>
-
-         {/*New Registrations code  */}
+     {/*New Registrations code  */}
          <div className="content-wrapper">
             <section className="col-lg-12 connectedSortable">
             <div className="card"  style={{width:'100%'}}>

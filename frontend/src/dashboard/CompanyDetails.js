@@ -1,17 +1,12 @@
 import React from 'react'
 import Menu from './Menu'
+import Header from './Header'
 
 export default function CompanyDetails() {
   return (
     <>
        {/* <Header/> */}
-
-    <nav className="main-header navbar navbar-expand navbar-white navbar-light">
-    {/* Left navbar links */}
-    <ul className="navbar-nav">
-      <li className="nav-item">
-        <a className="nav-link" data-widget="pushmenu" href="#" ><i className="fas fa-bars" /></a>
-      </li></ul></nav>
+       <Header/>
         
            {/* Body */}
            <div className="content-wrapper">
