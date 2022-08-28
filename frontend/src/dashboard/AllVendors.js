@@ -5,9 +5,34 @@ import Button from 'react-bootstrap/Button';
 import Header from './Header';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPen , faTrash } from '@fortawesome/free-solid-svg-icons'
+import { useNavigate } from 'react-router-dom';
 
 
-function AllCompanies() {
+function AllVendors() {
+
+
+  const navigate = useNavigate();
+
+  const HandleClick=()=>{
+  
+    let service="photography"
+   
+    if (service==="venue"){
+    navigate('/editVenueVendor');
+    }
+    else if (service==="photography"){
+      navigate('/editPhotoVendor');
+    }
+    else if (service==="decoration"){
+      navigate('/editDecorationVendor');
+    }
+    else if (service==="catering"){
+      navigate('/editCatererVendor');
+    }
+  }
+  
+  
+
   return (
     <>
     <Header/>
@@ -51,15 +76,15 @@ function AllCompanies() {
           <td>Company</td>
           <td>Islamabad</td>
           <td>Above 1500000</td>
-          <td>Venue Decoration Photography Catering</td>
+          <td>Photography </td>
           <td>16-8-2022</td>
           <td>500</td>
           <td>
           <div >
-           <Button  variant="success" style={{margin:'8%'}}>
+           <Button  variant="success" style={{margin:'8%'}} onClick={HandleClick}>
            <FontAwesomeIcon icon={ faPen } className="nav-icon"/>
            </Button>
-           <Button variant="danger">
+           <Button variant="danger" >
            <FontAwesomeIcon icon={ faTrash } className="nav-icon"/>
            </Button></div>
           </td>
@@ -73,13 +98,13 @@ function AllCompanies() {
           <td>Vendor</td>
           <td>Karachi</td>
           <td>Above 100000</td>
-          <td>Catering Venue</td>
+          <td>Catering </td>
           <td>16-8-2022</td>
           <td>400</td>
           <td>
           
           
-          <Button  variant="success" style={{margin:'8%'}}>
+          <Button  variant="success" style={{margin:'8%'}} onClick={HandleClick}>
            <FontAwesomeIcon icon={ faPen } className="nav-icon"/>
            </Button>
            <Button variant="danger">
@@ -93,12 +118,12 @@ function AllCompanies() {
           <td>Company</td>
           <td>Sukkur</td>
           <td>Above 150000</td>
-          <td>Venue Decoration Photography</td>
+          <td>Venue </td>
           <td>16-8-2022</td>
           <td>300</td>
           <td>
           
-          <Button  variant="success" style={{margin:'8%'}}>
+          <Button  variant="success" style={{margin:'8%'}} onClick={HandleClick}>
            <FontAwesomeIcon icon={ faPen } className="nav-icon"/>
            </Button>
            <Button variant="danger">
@@ -112,12 +137,12 @@ function AllCompanies() {
           <td>Vendor</td>
           <td>Islamabad</td>
           <td>Above 600000</td>
-          <td>Venue Catering</td>
+          <td>Decoration</td>
           <td>15-8-2022</td>
           <td>200</td>
           <td>
           
-          <Button  variant="success" style={{margin:'8%'}} >
+          <Button  variant="success" style={{margin:'8%'}} onClick={HandleClick} >
            <FontAwesomeIcon icon={ faPen } className="nav-icon" />
            </Button>
            <Button variant="danger">
@@ -139,4 +164,4 @@ function AllCompanies() {
     )
 }
 
-export default AllCompanies
+export default AllVendors

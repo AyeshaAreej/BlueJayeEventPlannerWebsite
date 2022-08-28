@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Dropdown from 'react-bootstrap/Dropdown';
-import DropdownButton from 'react-bootstrap/DropdownButton';
+
 
 export default class Header extends Component {
     render() {
@@ -30,7 +30,7 @@ export default class Header extends Component {
     {/* Right navbar links */}
     <ul className="navbar-nav ml-auto">
      
-      {/* Notifications Dropdown Menu */}
+      {/* Dropdown Menu */}
       <li className="nav-item dropdown">
         <a className="nav-link" data-toggle="dropdown" href="#/"  data-widget="control-sidebar" data-slide="true">
           <i className="fas fa-th-large" />

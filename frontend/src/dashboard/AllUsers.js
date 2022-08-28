@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPen , faTrash } from '@fortawesome/free-solid-svg-icons'
 
 
-function AllCompanies() {
+function AllUsers() {
   return (
     <>
     <Header/>
@@ -32,11 +32,11 @@ function AllCompanies() {
         <thead style={{fontSize:15}}>
         <tr   >
           <th>#</th>
-          <th style={{width:'14%',}}>Business Name </th>
-          <th style={{width:'16%'}}>Business Type</th>
+          <th style={{width:'14%',}}> Name </th>
+          <th style={{width:'16%'}}> Email </th>
           <th >City</th>
-          <th style={{width:'12%'}}>Price Range</th>
-          <th style={{width:'18%'}}>Services</th>
+          <th style={{width:'15%'}}>Phone Number</th>
+          
           <th style={{width:'11%'}}>Date</th>
           <th style={{width:'12%'}}>Total Orders</th>
           <th style={{width:'15%'}}>Action</th>
@@ -47,21 +47,16 @@ function AllCompanies() {
       <tbody style={{fontSize:14}}>
         <tr >
           <td>1</td>
-          <td>Floral Weddings</td>
-          <td>Company</td>
+          <td>Ilyana</td>
+          <td>ilyana@gmail.com</td>
           <td>Islamabad</td>
-          <td>Above 1500000</td>
-          <td>Venue Decoration Photography Catering</td>
+          <td>0300-2932932</td>
           <td>16-8-2022</td>
           <td>500</td>
           <td>
-          <div >
-           <Button  variant="success" style={{margin:'8%'}}>
-           <FontAwesomeIcon icon={ faPen } className="nav-icon"/>
-           </Button>
-           <Button variant="danger">
+          <Button variant="danger" style={{marginLeft:'30%'}} >
            <FontAwesomeIcon icon={ faTrash } className="nav-icon"/>
-           </Button></div>
+           </Button>
           </td>
         
          
@@ -69,58 +64,44 @@ function AllCompanies() {
         </tr>
         <tr>
           <td>2</td>
-          <td>Spice Foods</td>
-          <td>Vendor</td>
+          <td>Maham</td>
+          <td>maham@gmail.com</td>
           <td>Karachi</td>
-          <td>Above 100000</td>
-          <td>Catering Venue</td>
+          <td>0300-2932932</td>
           <td>16-8-2022</td>
           <td>400</td>
           <td>
           
-          
-          <Button  variant="success" style={{margin:'8%'}}>
-           <FontAwesomeIcon icon={ faPen } className="nav-icon"/>
-           </Button>
-           <Button variant="danger">
+          <Button variant="danger" style={{marginLeft:'30%'}} >
            <FontAwesomeIcon icon={ faTrash } className="nav-icon"/>
            </Button>
           </td>
         </tr>
         <tr>
           <td>3</td>
-          <td>Royal Photographers</td>
-          <td>Company</td>
+          <td>Hana</td>
+          <td>hana@gmail.com</td>
           <td>Sukkur</td>
-          <td>Above 150000</td>
-          <td>Venue Decoration Photography</td>
+          <td>0300-2932932</td>
           <td>16-8-2022</td>
           <td>300</td>
           <td>
           
-          <Button  variant="success" style={{margin:'8%'}}>
-           <FontAwesomeIcon icon={ faPen } className="nav-icon"/>
-           </Button>
-           <Button variant="danger">
+          <Button variant="danger" style={{marginLeft:'30%'}} >
            <FontAwesomeIcon icon={ faTrash } className="nav-icon"/>
            </Button>
           </td>
         </tr>
         <tr>
           <td>4</td>
-          <td>Cocktail Parties</td>
-          <td>Vendor</td>
+          <td>sara</td>
+          <td>sara@gmail.com</td>
           <td>Islamabad</td>
-          <td>Above 600000</td>
-          <td>Venue Catering</td>
+          <td>0300-1292929</td>
           <td>15-8-2022</td>
           <td>200</td>
           <td>
-          
-          <Button  variant="success" style={{margin:'8%'}} >
-           <FontAwesomeIcon icon={ faPen } className="nav-icon" />
-           </Button>
-           <Button variant="danger">
+           <Button variant="danger" style={{marginLeft:'30%'}} >
            <FontAwesomeIcon icon={ faTrash } className="nav-icon"/>
            </Button>
           </td>
@@ -139,4 +120,4 @@ function AllCompanies() {
     )
 }
 
-export default AllCompanies
+export default AllUsers

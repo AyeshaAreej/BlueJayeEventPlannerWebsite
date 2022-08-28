@@ -38,7 +38,7 @@ export default class Menu extends Component {
               </li>
              
               <li className="nav-item">
-                <a href="dashboard/new" className="nav-link">
+                <a href="/new" className="nav-link">
                 <FontAwesomeIcon icon={ faCartPlus } className="nav-icon"/>
                 <p>New Registrations</p>
                 </a>
@@ -47,20 +47,20 @@ export default class Menu extends Component {
             </ul>
           </li>
           <li className="nav-item">
-                <a href="dashboard/allCompanies" className="nav-link">
+                <a href="/allCompanies" className="nav-link">
                 <FontAwesomeIcon icon={ faBuildingColumns } className="nav-icon"/>
                 <p>Companies</p>
                 </a>
             </li>
 
             <li className="nav-item">
-                <a href="dashboard/new" className="nav-link">
+                <a href="/allVendors" className="nav-link">
                 <FontAwesomeIcon icon={ faBuilding } className="nav-icon"/>
                 <p>Vendors</p>
                 </a>
             </li>
             <li className="nav-item">
-                <a href="dashboard/new" className="nav-link">
+                <a href="/allUsers" className="nav-link">
                 <FontAwesomeIcon icon={ faUser } className="nav-icon"/>
                 <p>Users</p>
                 </a>
