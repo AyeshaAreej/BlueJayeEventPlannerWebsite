@@ -1,4 +1,3 @@
-import Footer from './components/layouts/Footer';
 import Home from './components/home';
 import Register from './components/Register';
 import Companies from './components/layouts/Companies';
@@ -10,13 +9,8 @@ import AllCompanies from './dashboard/AllCompanies';
 import AllVendors from './dashboard/AllVendors';
 import AllUsers from './dashboard/AllUsers';
 import EditCompanyVendorDetails from './dashboard/EditCompanyVendorDetails';
-// Edit Vendor Details Screens
-import EditVenueVendor from './dashboard/EditVenueVendor';
 import NewCVDetails from './dashboard/NewCVDetails';
-
-
-
-
+import ContactDevelopers from './dashboard/ContactDevelopers';
 
 
 
@@ -36,12 +30,12 @@ function App() {
            <Route  path='allUsers' element={ <AllUsers/> }/>
            <Route  path='editCVDetails' element={ <EditCompanyVendorDetails/> }/>
            <Route  path='newCVDetails' element={ <NewCVDetails/> }/>
+           <Route  path='contactDevelopers' element={ <ContactDevelopers/> }/>
         
            
              
      </Routes>
 
-   
     </>
   );
 }

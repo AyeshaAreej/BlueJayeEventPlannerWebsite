@@ -78,7 +78,7 @@ export default class Menu extends Component {
                 </a>
             </li>
             <li className="nav-item">
-                <a href="dashboard/new" className="nav-link">
+                <a href="contactDevelopers" className="nav-link">
                 <FontAwesomeIcon icon={ faContactBook } className="nav-icon"/>
                 <p>Contact Developers</p>
                 </a>

@@ -1,4 +1,4 @@
-
+import Footer from '../components/layouts/Footer';
 import React, { useState } from 'react'
 import { set, useForm } from 'react-hook-form';
 import Container from 'react-bootstrap/Container';
@@ -270,6 +270,7 @@ const errorsStyle = {
     </div> 
     </Row>
    </Container>
+   <Footer/>
     </>
   )
 }

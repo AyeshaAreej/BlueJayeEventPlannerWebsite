@@ -7,6 +7,7 @@ import Button from 'react-bootstrap/Button';
 import Menu from './Menu';
 import Header from './Header';
 import Colors from '../components/Colors';
+import background from '../assets/bg3.jpg';
 import { useNavigate } from 'react-router-dom';
 
 
@@ -36,7 +37,7 @@ const HandleClick=()=>{
    
     <div >
      {/*New Registrations code  */}
-         <div className="content-wrapper">
+         <div className="content-wrapper" >
             <section className="col-lg-12 connectedSortable">
             <div className="card"  style={{width:'100%'}}>
               <div className="card-header">
@@ -50,27 +51,35 @@ const HandleClick=()=>{
               <div className=' card-body '>
                <Container>
               <Form>
-              <Row><Col><Form.Group className="mb-3">
+              <Row >
+               <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', marginBottom:'2%'}}>
+               <img style={{ borderRadius:20}}  src={background}  width="400"  height="150" alt="step1" />
+              </div> 
+             </Row>
+               
+                  <Row>     <Col><Form.Group className="mb-3">
                    <Form.Label>Business Name</Form.Label>
                    <Form.Control type="text" placeholder="Business Name" />
                   </Form.Group></Col>
                   
+                  <Col><Form.Group className="mb-3">
+                   <Form.Label>Business Type</Form.Label>
+                   <Form.Control type="text" placeholder="Business Type" />
+                  </Form.Group></Col>
+
                   <Col><Form.Group className="mb-3" controlId="formBasicEmail">
                   <Form.Label>Email address</Form.Label>
                   <Form.Control type="email" placeholder="Enter email" />
                   </Form.Group></Col>
+                
               </Row>
-              <Row><Col><Form.Group className="mb-3">
-                   <Form.Label>Business Type</Form.Label>
-                   <Form.Control type="text" placeholder="Business Type" />
-                  </Form.Group></Col>
-                  
+              <Row>  
                   <Col><Form.Group className="mb-3" >
                   <Form.Label>Services</Form.Label>
                   <Form.Control type="text" placeholder="Services" />
                   </Form.Group></Col>
-              </Row>
-              <Row><Col><Form.Group className="mb-3">
+              
+              <Col><Form.Group className="mb-3">
                    <Form.Label>Phone Number</Form.Label>
                    <Form.Control type="number" placeholder="Phone Numbere" />
                   </Form.Group></Col>
@@ -89,16 +98,18 @@ const HandleClick=()=>{
                   <Form.Label>Price Range</Form.Label>
                   <Form.Control type="number" placeholder="Price Range" />
                   </Form.Group></Col>
-              </Row>
-              <Row>
+
                   <Col><Form.Group className="mb-3" >
                   <Form.Label>Availability Hours</Form.Label>
                   <Form.Control type="number" placeholder="Availability Hours" />
                   </Form.Group></Col>
+              </Row>
+              <Row>
+             
 
                 <Col >
-                <div style={{ marginLeft:'40%',marginTop:'7%'}}>
-                 <Button type="submit"style={{borderColor:Colors.white, borderRadius:20, backgroundColor:Colors.primary, borderWidth:4, width:'60%' ,}}>
+                <div style={{ marginLeft:'40%'}}>
+                 <Button type="submit"style={{borderColor:Colors.white, borderRadius:20, backgroundColor:Colors.primary, borderWidth:4, width:'40%' ,}}>
                  Add</Button>
                 </div>
      
