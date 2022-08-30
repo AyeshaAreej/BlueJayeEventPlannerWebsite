@@ -38,7 +38,7 @@ export default class Dashboard extends Component {
               <div className="icon">
                 <i className="ion ion-bag" />
               </div>
-              <a href="#" className="small-box-footer">More info <i className="fas fa-arrow-circle-right" /></a>
+              <a href="/new" className="small-box-footer">More info <i className="fas fa-arrow-circle-right" /></a>
             </div>
           </div>
           {/* ./col */}
@@ -52,7 +52,7 @@ export default class Dashboard extends Component {
               <div className="icon">
                 <i className="ion ion-stats-bars" />
               </div>
-              <a href="#" className="small-box-footer">More info <i className="fas fa-arrow-circle-right" /></a>
+              <a href="/allCompanies" className="small-box-footer">More info <i className="fas fa-arrow-circle-right" /></a>
             </div>
           </div>
          
@@ -67,7 +67,7 @@ export default class Dashboard extends Component {
               <div className="icon">
                 <i className="ion ion-pie-graph" />
               </div>
-              <a href="#" className="small-box-footer">More info <i className="fas fa-arrow-circle-right" /></a>
+              <a href="/allVendors" className="small-box-footer">More info <i className="fas fa-arrow-circle-right" /></a>
             </div>
           </div>
           {/* ./col */}
@@ -82,7 +82,7 @@ export default class Dashboard extends Component {
               <div className="icon">
                 <i className="ion ion-person-add" />
               </div>
-              <a href="#" className="small-box-footer">More info <i className="fas fa-arrow-circle-right" /></a>
+              <a href="/allUsers" className="small-box-footer">More info <i className="fas fa-arrow-circle-right" /></a>
             </div>
           </div>
         </div>
@@ -305,6 +305,7 @@ export default class Dashboard extends Component {
               </div>
               {/* /.card-body */}
             </div>
+{/* till here */}
             {/* /.card */}
           </section>
           {/* right col */}

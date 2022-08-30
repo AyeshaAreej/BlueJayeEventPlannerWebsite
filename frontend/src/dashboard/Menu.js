@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Colors from '../components/Colors'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCartPlus, faBuildingColumns, faHome, faUser, faBuilding, faMessage, faGear, faQuestion, faBell } from '@fortawesome/free-solid-svg-icons'
+import { faCartPlus, faBuildingColumns, faHome, faUser, faBuilding, faMessage, faGear, faQuestion, faBell, faContactBook } from '@fortawesome/free-solid-svg-icons'
 export default class Menu extends Component {
     render() {
         return (
@@ -79,8 +79,8 @@ export default class Menu extends Component {
             </li>
             <li className="nav-item">
                 <a href="dashboard/new" className="nav-link">
-                <FontAwesomeIcon icon={ faQuestion } className="nav-icon"/>
-                <p>Help Centre</p>
+                <FontAwesomeIcon icon={ faContactBook } className="nav-icon"/>
+                <p>Contact Developers</p>
                 </a>
             </li>
             <li className="nav-item">

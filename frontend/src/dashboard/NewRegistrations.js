@@ -12,15 +12,16 @@ function NewRegistrations() {
   const navigate = useNavigate();
 
 const HandleClick=()=>{
+  navigate('/newCVDetails')
 
-  let role="vendor"
+  // let role="vendor"
  
-  if (role==="company"){
-  navigate('/CompanyDetails');
-  }
-  else if (role==="vendor"){
-    navigate('/VendorDetails');
-  }
+  // if (role==="company"){
+  // navigate('/CompanyDetails');
+  // }
+  // else if (role==="vendor"){
+  //   navigate('/VendorDetails');
+  // }
 }
 
 
@@ -72,9 +73,7 @@ const HandleClick=()=>{
            <Button style={{width:80,margin:2}}variant="danger">Reject</Button>
           </td>
           <td><button style={{color:'blue' }}  onClick={HandleClick} >Details</button></td>
-         
-       
-        </tr>
+         </tr>
         <tr>
           <td>2</td>
           <td>Spice Foods</td>
@@ -87,7 +86,7 @@ const HandleClick=()=>{
            <Button style={{width:80,margin:2}} variant="success">Accept</Button>
            <Button style={{width:80,margin:2}}variant="danger">Reject</Button>
           </td>
-          <td><a style={{color:'blue' }} href="#/deatils">Details</a></td>
+          <td><button style={{color:'blue' }}  onClick={HandleClick} >Details</button></td>
         </tr>
         <tr>
           <td>3</td>
@@ -101,7 +100,7 @@ const HandleClick=()=>{
            <Button style={{width:80,margin:2}} variant="success">Accept</Button>
            <Button style={{width:80,margin:2}}variant="danger">Reject</Button>
           </td>
-          <td><a style={{color:'blue' }} href="#/deatils">Details</a></td>
+          <td><button style={{color:'blue' }}  onClick={HandleClick} >Details</button></td>
         </tr>
         <tr>
           <td>4</td>
@@ -115,7 +114,7 @@ const HandleClick=()=>{
            <Button style={{width:80,margin:2}} variant="success">Accept</Button>
            <Button style={{width:80,margin:2}}variant="danger">Reject</Button>
           </td>
-          <td><a style={{color:'blue' }} href="#/deatils">Details</a></td>
+          <td><button style={{color:'blue', backgroundColor:'none' }}  onClick={HandleClick} >Details</button></td>
         </tr>
       </tbody>
     </Table>
@@ -123,9 +122,9 @@ const HandleClick=()=>{
  </div>
  </div>
 </section>
- </div>
 </div>
-    <Menu/>
+</div>
+<Menu/>
     </>
     )
 }

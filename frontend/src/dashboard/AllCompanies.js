@@ -5,9 +5,17 @@ import Button from 'react-bootstrap/Button';
 import Header from './Header';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPen , faTrash } from '@fortawesome/free-solid-svg-icons'
+import { useNavigate } from 'react-router-dom';
 
 
 function AllCompanies() {
+
+
+  const navigate = useNavigate();
+
+  const HandleClick=()=>{
+    navigate('/editCVDetails');}
+
   return (
     <>
     <Header/>
@@ -56,7 +64,7 @@ function AllCompanies() {
           <td>500</td>
           <td>
           <div >
-           <Button  variant="success" style={{margin:'8%'}}>
+           <Button  variant="success" style={{margin:'8%'}} onClick={HandleClick}>
            <FontAwesomeIcon icon={ faPen } className="nav-icon"/>
            </Button>
            <Button variant="danger">
@@ -79,7 +87,7 @@ function AllCompanies() {
           <td>
           
           
-          <Button  variant="success" style={{margin:'8%'}}>
+          <Button  variant="success" style={{margin:'8%'}} onClick={HandleClick}>
            <FontAwesomeIcon icon={ faPen } className="nav-icon"/>
            </Button>
            <Button variant="danger">
@@ -98,7 +106,7 @@ function AllCompanies() {
           <td>300</td>
           <td>
           
-          <Button  variant="success" style={{margin:'8%'}}>
+          <Button  variant="success" style={{margin:'8%'}} onClick={HandleClick}>
            <FontAwesomeIcon icon={ faPen } className="nav-icon"/>
            </Button>
            <Button variant="danger">
@@ -117,7 +125,7 @@ function AllCompanies() {
           <td>200</td>
           <td>
           
-          <Button  variant="success" style={{margin:'8%'}} >
+          <Button  variant="success" style={{margin:'8%'}} onClick={HandleClick}>
            <FontAwesomeIcon icon={ faPen } className="nav-icon" />
            </Button>
            <Button variant="danger">

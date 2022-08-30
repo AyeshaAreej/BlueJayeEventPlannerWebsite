@@ -22,7 +22,7 @@ function AllUsers() {
               <div className="card-header">
                 <h3 className="card-title">
                   <i className="ion ion-clipboard mr-1" />
-                   Registered Companies
+                   Registered Users
                 </h3>
               </div>
               {/* /.card-header */}

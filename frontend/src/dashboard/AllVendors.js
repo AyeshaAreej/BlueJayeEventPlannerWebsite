@@ -14,21 +14,22 @@ function AllVendors() {
   const navigate = useNavigate();
 
   const HandleClick=()=>{
+    navigate('/editCVDetails');
   
-    let service="photography"
+    // let service="photography"
    
-    if (service==="venue"){
-    navigate('/editVenueVendor');
-    }
-    else if (service==="photography"){
-      navigate('/editPhotoVendor');
-    }
-    else if (service==="decoration"){
-      navigate('/editDecorationVendor');
-    }
-    else if (service==="catering"){
-      navigate('/editCatererVendor');
-    }
+    // if (service==="venue"){
+    // navigate('/editVenueVendor');
+    // }
+    // else if (service==="photography"){
+    //   navigate('/editPhotoVendor');
+    // }
+    // else if (service==="decoration"){
+    //   navigate('/editDecorationVendor');
+    // }
+    // else if (service==="catering"){
+    //   navigate('/editCatererVendor');
+    // }
   }
   
   
@@ -47,7 +48,7 @@ function AllVendors() {
               <div className="card-header">
                 <h3 className="card-title">
                   <i className="ion ion-clipboard mr-1" />
-                   Registered Companies
+                   Registered Vendors
                 </h3>
               </div>
               {/* /.card-header */}

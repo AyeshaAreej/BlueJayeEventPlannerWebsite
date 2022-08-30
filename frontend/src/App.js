@@ -9,13 +9,11 @@ import NewRegistrations from './dashboard/NewRegistrations';
 import AllCompanies from './dashboard/AllCompanies';
 import AllVendors from './dashboard/AllVendors';
 import AllUsers from './dashboard/AllUsers';
-import VendorDetails from './dashboard/VendorDetails';
-import CompanyDetails from './dashboard/CompanyDetails';
+import EditCompanyVendorDetails from './dashboard/EditCompanyVendorDetails';
 // Edit Vendor Details Screens
-import EditCatrngVendor from './dashboard/EditCatrngVendor';
-import EditDcortionVendor from './dashboard/EditDcortionVendor';
-import EditPhotoVendor from './dashboard/EditPhotoVendor';
 import EditVenueVendor from './dashboard/EditVenueVendor';
+import NewCVDetails from './dashboard/NewCVDetails';
+
 
 
 
@@ -36,13 +34,9 @@ function App() {
            <Route  path='allCompanies' element={ <AllCompanies/> }/>
            <Route  path='allVendors' element={ <AllVendors/>  }/>
            <Route  path='allUsers' element={ <AllUsers/> }/>
-           <Route  path='companyDetails' element={ <CompanyDetails/> }/>
-           <Route  path='vendorDetails' element={ <VendorDetails/> }/>
-           <Route  path='editPhotoVendor' element={ <EditPhotoVendor/> }/>
-           <Route  path='editVenueVendor' element={ <EditVenueVendor/> }/>
-           <Route  path='editDecorationVendor' element={ <EditDcortionVendor/> }/> 
-           <Route  path='editCatererVendor' element={ <EditCatrngVendor/> }/>
-
+           <Route  path='editCVDetails' element={ <EditCompanyVendorDetails/> }/>
+           <Route  path='newCVDetails' element={ <NewCVDetails/> }/>
+        
            
              
      </Routes>
