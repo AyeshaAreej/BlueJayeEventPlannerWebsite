@@ -18,7 +18,7 @@ export default class Menu extends Component {
       <div className="user-panel mt-3 pb-3 mb-3 d-flex">
 
         <div className="info">
-          <a href="#" className="d-block" style={{fontSize:27, fontWeight:'bold'}}>John Alexander </a>
+          <a href="#/" className="d-block" style={{fontSize:27, fontWeight:'bold'}}>Ayesha Areej </a>
         </div>
       </div>
       {/* Sidebar Menu */}

@@ -1,39 +1,36 @@
 import Menu from './Menu';
 import Header from './Header';
-import Colors from '../components/Colors';
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import styled from "styled-components";
+import Alert from 'react-bootstrap/Alert';
 
 // npm i @emailjs/browser
 
-const ContactDevelopers = () => {
+const ContactDevelopers = ({alert}) => {
+
+  const[mssgState, setMessageState]=useState(false)
   const form = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs
-      .sendForm(
-        "service_1jf72q8",
-        "template_ktk7don",
-        form.current,
-        "replace with user id"
-      )
-      .then(
-        (result) => {
+    emailjs.sendForm('service_7u0968e', 'template_ltr9ynj', form.current, '-Piq8r-Roi5__Ycx_')
+      .then((result) => {
           console.log(result.text);
-          console.log("message sent");
-        },
-        (error) => {
+          setMessageState(true)
+    
+      }, (error) => {
           console.log(error.text);
-        }
-      );
-  };
-
+      });
+      console.log(form.current)
+    }
   return (
     <>
     <Header/>
+    <div className="content-wrapper" style={{ display:'flex',  justifyContent:'center', alignItems:'center',   }}>
+            <section className="col-lg-6 connectedSortable">
+            <div className="card"  style={{width:'100%'}}>
     <StyledContactForm>
       <form ref={form} onSubmit={sendEmail}>
         <label>Name</label>
@@ -43,8 +40,13 @@ const ContactDevelopers = () => {
         <label>Message</label>
         <textarea name="message" />
         <input type="submit" value="Send" />
+        {mssgState &&  <Alert style={{marginLeft:'25%', marginTop:'5%'}} key="success" variant="success">
+          Message Sent Successfully!
+        </Alert>}
       </form>
     </StyledContactForm>
+    </div>
+    </section></div>
     <Menu/>
     </>
   );
@@ -52,9 +54,13 @@ const ContactDevelopers = () => {
 
 export default ContactDevelopers;
 
+
+
+
 // Styles
 const StyledContactForm = styled.div`
-  width: 400px;
+  width: 500px;
+
 
   form {
     display: flex;
@@ -72,7 +78,7 @@ const StyledContactForm = styled.div`
       border: 1px solid rgb(220, 220, 220);
 
       &:focus {
-        border: 2px solid rgba(0, 206, 158, 1);
+        border: 2px solid rgb(153, 0, 153);
       }
     }
 
@@ -88,7 +94,7 @@ const StyledContactForm = styled.div`
       border: 1px solid rgb(220, 220, 220);
 
       &:focus {
-        border: 2px solid rgba(0, 206, 158, 1);
+        border: 2px solid rgb(153, 0, 153);
       }
     }
 
@@ -99,7 +105,7 @@ const StyledContactForm = styled.div`
     input[type="submit"] {
       margin-top: 2rem;
       cursor: pointer;
-      background: rgb(249, 105, 14);
+      background: rgb(153, 0, 153);
       color: white;
       border: none;
     }
