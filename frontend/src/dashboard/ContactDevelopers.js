@@ -4,6 +4,7 @@ import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import styled from "styled-components";
 import Alert from 'react-bootstrap/Alert';
+import Colors from '../components/Colors';
 
 // npm i @emailjs/browser
 
@@ -28,9 +29,10 @@ const ContactDevelopers = ({alert}) => {
   return (
     <>
     <Header/>
-    <div className="content-wrapper" style={{ display:'flex',  justifyContent:'center', alignItems:'center',   }}>
+    <div className="content-wrapper" style={{ display:'flex',  justifyContent:'center', alignItems:'center', }}>
             <section className="col-lg-6 connectedSortable">
-            <div className="card"  style={{width:'100%'}}>
+            <div className="card"  style={{width:'100%',  marginTop:'1%' }}>
+            <h3 style={{display:'flex', justifyContent:"center", color:Colors.primary}}>Contact Form</h3>
     <StyledContactForm>
       <form ref={form} onSubmit={sendEmail}>
         <label>Name</label>
@@ -70,9 +72,9 @@ const StyledContactForm = styled.div`
     font-size: 16px;
 
     input {
-      width: 100%;
+      width: 95%;
       height: 35px;
-      padding: 7px;
+      padding: 5px;
       outline: none;
       border-radius: 5px;
       border: 1px solid rgb(220, 220, 220);
@@ -83,8 +85,8 @@ const StyledContactForm = styled.div`
     }
 
     textarea {
-      max-width: 100%;
-      min-width: 100%;
+      max-width: 95%;
+      min-width: 95%;
       width: 100%;
       max-height: 100px;
       min-height: 100px;
@@ -94,12 +96,13 @@ const StyledContactForm = styled.div`
       border: 1px solid rgb(220, 220, 220);
 
       &:focus {
-        border: 2px solid rgb(153, 0, 153);
+        border: 2px solid rgb(153, 0, 190);
       }
     }
 
     label {
       margin-top: 1rem;
+      color:rgb(153, 0, 153);
     }
 
     input[type="submit"] {

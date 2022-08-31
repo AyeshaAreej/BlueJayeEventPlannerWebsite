@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Colors from '../components/Colors'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCartPlus, faBuildingColumns, faHome, faUser, faBuilding, faMessage, faGear, faQuestion, faBell, faContactBook } from '@fortawesome/free-solid-svg-icons'
+import { faCartPlus, faBuildingColumns, faHome, faUser, faBuilding, faIdCard,  faGear,  faContactBook, faHandHoldingDollar } from '@fortawesome/free-solid-svg-icons'
 export default class Menu extends Component {
     render() {
         return (
@@ -67,14 +67,14 @@ export default class Menu extends Component {
             </li>
             <li className="nav-item">
                 <a href="dashboard/new" className="nav-link">
-                <FontAwesomeIcon icon={ faBell } className="nav-icon"/>
-                <p>Notification</p>
+                <FontAwesomeIcon icon={ faHandHoldingDollar } className="nav-icon"/>
+                <p>Profit</p>
                 </a>
             </li>
             <li className="nav-item">
                 <a href="dashboard/new" className="nav-link">
-                <FontAwesomeIcon icon={ faMessage } className="nav-icon"/>
-                <p>Messages</p>
+                <FontAwesomeIcon icon={ faIdCard } className="nav-icon"/>
+                <p>Profile</p>
                 </a>
             </li>
             <li className="nav-item">
@@ -83,12 +83,7 @@ export default class Menu extends Component {
                 <p>Contact Developers</p>
                 </a>
             </li>
-            <li className="nav-item">
-                <a href="dashboard/new" className="nav-link">
-                <FontAwesomeIcon icon={ faGear}  className="nav-icon"/>
-                <p>Settings</p>
-                </a>
-            </li>
+    
 
           
          
