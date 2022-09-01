@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React from 'react'
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -8,26 +8,13 @@ import Menu from './Menu';
 import Header from './Header';
 import Colors from '../components/Colors';
 import background from '../assets/bg3.jpg';
-import { useNavigate } from 'react-router-dom';
+
 
 
 
 function NewCVDetails() {
   
-  const navigate = useNavigate();
 
-const HandleClick=()=>{
-  navigate('/newCVDetails')
-
-  // let role="vendor"
- 
-  // if (role==="company"){
-  // navigate('/CompanyDetails');
-  // }
-  // else if (role==="vendor"){
-  //   navigate('/VendorDetails');
-  // }
-}
 
 
 

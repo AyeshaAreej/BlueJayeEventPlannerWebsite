@@ -11,6 +11,7 @@ import AllUsers from './dashboard/AllUsers';
 import EditCompanyVendorDetails from './dashboard/EditCompanyVendorDetails';
 import NewCVDetails from './dashboard/NewCVDetails';
 import ContactDevelopers from './dashboard/ContactDevelopers';
+import AdminProfile from './dashboard/AdminProfile';
 
 
 
@@ -31,6 +32,7 @@ function App() {
            <Route  path='editCVDetails' element={ <EditCompanyVendorDetails/> }/>
            <Route  path='newCVDetails' element={ <NewCVDetails/> }/>
            <Route  path='contactDevelopers' element={ <ContactDevelopers/> }/>
+           <Route  path='adminProfile' element={ <AdminProfile/> }/>
         
            
              

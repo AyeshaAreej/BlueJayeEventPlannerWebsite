@@ -72,7 +72,7 @@ export default class Menu extends Component {
                 </a>
             </li>
             <li className="nav-item">
-                <a href="dashboard/new" className="nav-link">
+                <a href="/adminProfile" className="nav-link">
                 <FontAwesomeIcon icon={ faIdCard } className="nav-icon"/>
                 <p>Profile</p>
                 </a>

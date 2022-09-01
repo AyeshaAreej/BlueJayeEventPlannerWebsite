@@ -41,7 +41,7 @@ const ContactDevelopers = ({alert}) => {
         <input type="email" name="user_email" />
         <label>Message</label>
         <textarea name="message" />
-        <input type="submit" value="Send" />
+       <input type="submit" value="Send" />
         {mssgState &&  <Alert style={{marginLeft:'25%', marginTop:'5%'}} key="success" variant="success">
           Message Sent Successfully!
         </Alert>}

@@ -38,8 +38,8 @@ export default class Header extends Component {
         </a>
         <div className="dropdown-menu dropdown-menu-lg dropdown-menu-right">
         
-            <Dropdown.Item eventKey="1">Profile</Dropdown.Item>
-            <Dropdown.Item eventKey="2">Dashboard</Dropdown.Item>
+            <Dropdown.Item eventKey="1" href="/adminProfile">Profile</Dropdown.Item>
+            <Dropdown.Item eventKey="2" href="/dashboard" >Dashboard</Dropdown.Item>
             <Dropdown.Divider />
             <Dropdown.Item eventKey="4">Log Out</Dropdown.Item>
           

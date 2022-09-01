@@ -1,11 +1,9 @@
-import React,{useState,useEffect,useRef} from 'react';
+import React from 'react';
 import {Link} from 'react-router-dom';
 import logo from '../assets/download.jpg';
 import welcomeimg from '../assets/loginimag2.PNG';
 import '../Login.css';
 import GeneralNav from './layouts/GeneralNav'
-import {useSelector,useDispatch} from 'react-redux';
-import {useHistory} from 'react-router-dom';
 import {Formik, useFormik} from 'formik'
 import * as Yup from 'yup';
 
