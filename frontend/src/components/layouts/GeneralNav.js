@@ -12,12 +12,12 @@ function GeneralNav() {
     <>
 
     
-    <Navbar  sticky="top" variant="dark" style={{backgroundColor:Colors.primary}}>
+    <Navbar  sticky="top" variant="dark" style={{backgroundColor:Colors.mainColor}}>
         <Container>
           <Navbar.Brand href="/" style={{fontSize:28,}}>
             <img
               alt=""
-              src="/images/logo2.1.png"
+              src="/images/logoheader2.png"
               width="50"
               height="50"
               className="d-inline-block align-top "

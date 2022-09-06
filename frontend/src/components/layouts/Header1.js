@@ -6,9 +6,32 @@ import Colors from '../Colors';
 function Header1() {
   return (
     <>
-     
+      <div className="header">
+     <a href="#/" className="logo">
+     <img
+              alt=""
+              src="/images/logoheader2.png"
+              width="85"
+              height="55"
+            
+            />
+     <span>BlueJay</span>EventPlanners</a>
+ 
+<div className="navbar">
+    <a href="#home">home</a>
+    <a href="#service">services</a>
+    <a href="#about">about</a>
+    <a href="#mobileApp">Mobile App</a>
+    <a href="#contact">contact</a>
+    <a href="/register">Register</a>
+    <a href="/login">Admin Login</a>
+</div>
+
+<div id="menu-bars" className="fas fa-bars"></div>
+    </div>
+   
   
-      <Navbar sticky="top" variant="dark" style={{backgroundColor:Colors.primary}}>
+      {/* <Navbar sticky="top" variant="dark" style={{backgroundColor:Colors.primary}}>
         <Container style={{justifyContent:'center', alignItems:'center'}}>
           <Navbar.Brand href="#register" style={{fontSize:29, }}>
             <img
@@ -26,7 +49,7 @@ function Header1() {
             Register Now</Button>
           </Navbar.Brand>
         </Container>
-      </Navbar>
+      </Navbar> */}
     </>
   );
 }

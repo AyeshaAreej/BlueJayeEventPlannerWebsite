@@ -64,18 +64,18 @@ const errorsStyle = {
 
 
   return (
-    <>
+    <div style={{backgroundColor:"#ecd1c4"}}>
     <GeneralNav/>
     <section  className='col col-sm-12 col-md-12'  style={{ backgroundImage:`url(${background})`,  } }>
 
     <Container >
       <Row>
       {/* 1st column */}
-        <Col xs={4} style={{color:Colors.white, fontWeight:"bold",fontSize:23, marginTop:'17%', marginLeft:'4%'}}>
-        <h3 style={{marginBottom:'10%'}}> PARTNER WITH US</h3>
-        We aim to get people in touch with event planner companies and companies with vendors to book and execute event successfully.<br/><br/>
+        <Col xs={4} style={{color:Colors.white, fontWeight:"bold", marginTop:'17%', marginLeft:'4%'}}>
+        <h3 style={{marginBottom:'10%',fontSize:35}}> PARTNER WITH US</h3>
+       <span style={{fontSize:20}}> We aim to get people in touch with event planner companies and companies with vendors to book and execute event successfully.<br/><br/>
         BlueJay Event Planners is national, fast-growing business that maintains its appeal as localised service with community ambition.
-        </Col>
+        </span></Col>
 
 
         {/* Form  */}
@@ -186,6 +186,7 @@ const errorsStyle = {
           label="Agree to terms and conditions"
           feedback="You must agree before submitting."
           feedbackType="invalid"
+          style={{fontSize:15}}
         />
         </Form.Group>
 
@@ -202,12 +203,12 @@ const errorsStyle = {
 </Container>
 </section>
 
-<div style={{display: 'flex',  justifyContent:'center', alignItems:'center', marginTop:'5%', fontWeight:'bold'}}>
-    <h3>Steps to Activation</h3>
+<div style={{display: 'flex',color:Colors.white,  justifyContent:'center', alignItems:'center', marginTop:'5%', fontWeight:'bold', fontSize:45}}>
+    <h1>Steps to Activation</h1>
 </div>
   
    <Container >
-    <Row style={{marginTop:"5%"}}>
+    <Row style={{marginTop:"5%",}}>
      
       <Col><img src={step1} alt="step1" width="50"  height="50" /></Col>
       <Col><img src={Step3} alt="step2" width="50"  height="50" /></Col>
@@ -216,23 +217,23 @@ const errorsStyle = {
       
     </Row>
 
-    <Row style={{marginTop:"2%"}}>
+    <Row style={{marginTop:"2%", fontSize:16, color:Colors.primary}}>
 
-      <Col>Step 1:<br/> Register online </Col>
-      <Col >Step 2:<br/> BlueJay Event Planners send the contract </Col>
-      <Col>Step 3:<br/> Sign the contract </Col>
-      <Col >Step 4:<br/> Go live on BlueJay Event Planner's Mobile app </Col>
+      <Col><span style={{fontWeight:'bold', fontSize:20}}>Step 1:</span><br/> Register online </Col>
+      <Col ><span style={{fontWeight:'bold', fontSize:20}}>Step 3:</span><br/> BlueJay Event Planners send the contract </Col>
+      <Col><span style={{fontWeight:'bold', fontSize:20}}>Step 3:</span><br/> Sign the contract </Col>
+      <Col ><span style={{fontWeight:'bold', fontSize:20}}>Step 4:</span><br/> Go live on BlueJay Event Planner's Mobile app </Col>
     
     </Row>
    </Container>
 
-   <Container  style={{backgroundColor:Colors.primary, marginTop:"5%", marginBottom:'5%'}}>
+   <Container  style={{backgroundColor:Colors.mainColor, marginTop:"5%", marginBottom:'5%'}}>
     <Row>
       <Col ><img src={advantage} alt="step1" width="250"  height="270" style={{marginTop:"5%", marginBottom:'5%', borderRadius:20}} /></Col>  
       <Col xs={6}>
         <Row> <Col style={{color:Colors.white, marginTop:"5%", marginBottom:'5%', fontSize:26, fontWeight:"bold"}}> Advantage of Joining us </Col> </Row>
-        <Row> <Col> <img src={tic} alt="tic" width="30" height="30" style={{borderRadius:24, marginRight:'4%'}}/><span style={{color:Colors.white,fontWeight:"bold", fontSize:18}}>More Revenue</span>  <p style={{color:Colors.white,marginLeft:'10%'}}>With BlueJay Event Planners, you will gain an additional source of income.</p> </Col> </Row>
-        <Row> <Col> <img src={tic} alt="tic" width="30" height="30" style={{borderRadius:24, marginRight:'4%'}}/><span style={{color:Colors.white,fontWeight:"bold", fontSize:18}}>Dedicated Support </span> <p style={{color:Colors.white,marginLeft:'10%'}}>From perfecting your services and getting you orders, to improving your performance, we're here to help you every step of the way.</p></Col> </Row>
+        <Row> <Col> <img src={tic} alt="tic" width="30" height="30" style={{borderRadius:24, marginRight:'4%'}}/><span style={{color:Colors.white,fontWeight:"bold", fontSize:20}}>More Revenue</span>  <p style={{color:Colors.white,marginLeft:'10%',fontSize:16}}>With BlueJay Event Planners, you will gain an additional source of income.</p> </Col> </Row>
+        <Row> <Col> <img src={tic} alt="tic" width="30" height="30" style={{borderRadius:24, marginRight:'4%'}}/><span style={{color:Colors.white,fontWeight:"bold", fontSize:20}}>Dedicated Support </span> <p style={{color:Colors.white,marginLeft:'10%',fontSize:16}}>From perfecting your services and getting you orders, to improving your performance, we're here to help you every step of the way.</p></Col> </Row>
     
       </Col>
       <Col></Col>
@@ -242,8 +243,8 @@ const errorsStyle = {
 
    {/* Our process */}
 
-   <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', marginTop:'5%', fontWeight:'bold'}}>
-    <h3>How it works</h3>
+   <div style={{display: 'flex',color:Colors.white,  justifyContent:'center', alignItems:'center', marginTop:'5%', fontWeight:'bold', fontSize:45}}>
+    <h1>How it works</h1>
 </div>
   
    <Container >
@@ -256,21 +257,21 @@ const errorsStyle = {
      
     </Row>
 
-    <Row style={{marginTop:"2%"}}>
+    <Row style={{marginTop:"2%",fontSize:16, color:Colors.primary}}>
 
-      <Col >Step 1:<br/> Customer select an available company and fill their booking form.</Col>
-      <Col >Step 2:<br/> Company ask customer to pay advance Company accepts the order, and starts searching vendors for needed services . </Col>
-      <Col >Step 3:<br/> Company highers vendors for services like food, venue and so on </Col>
-      <Col >Step 4:<br/> Company and vendor both together execute the event </Col>
+      <Col ><span style={{fontWeight:'bold', fontSize:20}}>Step 1:</span><br/> Customer select an available company and fill their booking form.</Col>
+      <Col> <span style={{fontWeight:'bold', fontSize:20}}>Step 2:</span><br/> Company ask customer to pay advance Company accepts the order, and starts searching vendors for needed services . </Col>
+      <Col ><span style={{fontWeight:'bold', fontSize:20}}>Step 3:</span><br/> Company highers vendors for services like food, venue and so on </Col>
+      <Col ><span style={{fontWeight:'bold', fontSize:20}}>Step 4:</span><br/> Company and vendor both together execute the event </Col>
      
     </Row>
     <Row>
    <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', marginTop:'5%', fontWeight:'bold'}}>
-     <Button href="/register" size="lg" type="submit" style={{ marginBottom:"2%", width:300 ,color:Colors.white, backgroundColor:Colors.primary, borderColor:Colors.primary }}> Get Started</Button>
+     <Button href="/register" size="lg" type="submit" style={{ marginBottom:"2%", width:300 ,color:Colors.white, backgroundColor:Colors.mainColor, borderColor:Colors.primary }}> Get Started</Button>
     </div> 
     </Row>
    </Container>
    <Footer/>
-    </>
+    </div>
   )
 }

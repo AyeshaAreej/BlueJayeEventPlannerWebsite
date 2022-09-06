@@ -1,51 +1,52 @@
-import Carousel from 'react-bootstrap/Carousel';
+import Colors from '../Colors';
+import { Swiper, SwiperSlide } from 'swiper/react';
+// Import Swiper styles
+import 'swiper/css';
+import slide1 from '../../assets/images/slide-1.jpg';
+import slide2 from '../../assets/images/slide-4.jpg';
+import slide3 from '../../assets/images/slide-5.jpg';
+import slide4 from '../../assets/images/g-4.jpg'
+import slide5 from '../../assets/images/g-5.jpg'
+import slide6 from '../../assets/images/g-9.jpg'
 
 function MyCarousel() {
   return (
-    <div style={{ marginLeft:'1%', marginRight:'1%', borderRadius:25}}>
-    <Carousel fade >
-      <Carousel.Item style={{ borderRadius:25}}>
-        <img
-          className="d-block w-100"
-          src="/images/hotel1.jpg"
-          alt="First slide"
-          height="400"
-        />
-        <Carousel.Caption>
-          <h3>Floral Weddings</h3>
-          <p>We work to fullfil your dream.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img 
-          className="d-block w-100"
-          src="/images/hotel2.jpg"
-          alt="Second slide"
-          height='400'
-        />
+    <section className="home" id="home">
 
-        <Carousel.Caption>
-          <h3>Floral Weddings</h3>
-          <p>We work to fullfil your dream.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src="/images/hotel1.jpg"
-          alt="Third slide"
-          height='400'
-        />
-
-        <Carousel.Caption>
-          <h3>Classic Music Band</h3>
-          <p>
-           Give your wedding a classic touch
-          </p>
-        </Carousel.Caption>
-      </Carousel.Item>
-    </Carousel>
+    <div className="content">
+        <h3>You Organize The Event, 
+         <span>We Handle The Rest </span></h3>
     </div>
+
+    <Swiper
+      spaceBetween={4}
+      slidesPerView={3}
+      onSlideChange={() => console.log('slide change')}
+      onSwiper={(swiper) => console.log(swiper)}
+    >
+     <div className="swiper-container home-slider">
+        <div className="swiper-wrapper">
+      <SwiperSlide style={{ height: "5%", width: "50%", }}> <img src={slide1} alt=""/></SwiperSlide>
+      <SwiperSlide style={{ height: "5%", width: "50%", }}><img src={slide2} alt=""/></SwiperSlide>
+      <SwiperSlide style={{ height: "5%", width: "50%", }}><img src={slide3} alt=""/></SwiperSlide>
+      <SwiperSlide style={{ height: "5%", width: "50%", }}><img src={slide4} alt=""/></SwiperSlide>
+      <SwiperSlide style={{ height: "5%", width: "50%", }}><img src={slide5} alt=""/></SwiperSlide>
+      <SwiperSlide style={{ height: "5%", width: "50%", }}><img src={slide6} alt=""/></SwiperSlide>
+      </div></div>
+    </Swiper>
+
+    {/* <div className="swiper-container home-slider">
+        <div className="swiper-wrapper">
+            <div className="swiper-slide"><img src={slide1} alt=""/></div>
+            <div className="swiper-slide"><img src={slide4} alt=""/></div>
+            <div className="swiper-slide"><img src={slide3} alt=""/></div>
+            
+        
+        </div>
+    </div> */}
+
+</section>
+
   );
 }
 

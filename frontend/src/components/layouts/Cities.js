@@ -8,42 +8,79 @@ import Colors from '../Colors';
 
 function Cities() {
 
-   const  title=["Sukkur", "Karachi", "Lahore", "Islamabad"];
+   const  title=["Sukkur", "Karachi", "Lahore", "Islamabad", "Hyderabad", "Peshawar"];
  
   return (
  <>
-   <p style={{ marginLeft:'2%',marginTop:'10%', fontStyle:'oblique', fontSize:25,color:Colors.primary }}>Find us in these cities, and many more !</p>
-    <div style={{margin:'1%', marginBottom:"10%",
-          justifyContent:'center', alignItems:'center'}} >
-    
-    
-    <Row xs={2} md={4} className="g-4" >
-    
-    {Array.from({ length: 4 }).map((_, idx) => (
-      <Col>
-        <Card style={{borderRadius:25, borderWidth:2, width:'95%'}}
-       >
-    
-        <Link to="/companies">
-        <Card.Img
-        style={{borderRadius:25, borderColor:Colors.primary, borderWidth:3}}
-         variant="top" src="/images/Islamabad.jpg"   /></Link>
-        
-      <Card.Body>
-      
-      <Card.Title style={{color:Colors.primary, marginLeft:"37%"}}>{title[idx]} </Card.Title>
-      
-       
-        {/* <Col> <i style={{color:Colors.primary, Width:130 }}  class='fas fa-arrow-right'>
-        </i></Col> */}
-     
-      </Card.Body>
-    </Card>
-   </Col>
-    ))}
-  </Row>
  
-</div>
+
+<section className="gallery" id="gallery">
+
+    <h1 className="heading">Cities in which we <span>Operate</span></h1>
+
+    <div className="box-container">
+
+        <div className="box">
+            <img src="/images/sukkur.jpg" alt=""/>
+            <h3 className="title">{title[0]}</h3>
+            <div className="icons">
+                <a href="/companies" className="fas fa-share"></a>
+              
+            </div>
+        </div>
+
+        <div className="box">
+            <img src="/images/karachi.jpg" alt=""/>
+            <h3 className="title">{title[1]}</h3>
+            <div className="icons">
+              
+                <a href="/companies" className="fas fa-share"></a>
+            
+            </div>
+        </div>
+
+        <div className="box">
+            <img src="/images/lahore.jpg" alt=""/>
+            <h3 className="title">{title[2]}</h3>
+            <div className="icons">
+             
+                <a href="/companies" className="fas fa-share"></a>
+               
+            </div>
+        </div>
+
+        <div className="box">
+            <img src="/images/Islamabad.jpg" alt=""/>
+            <h3 className="title">{title[3]}</h3>
+            <div className="icons">
+                <a href="/companies" className="fas fa-share"></a>
+                
+            </div>
+        </div>
+
+        <div className="box">
+            <img src="/images/hyderabad.jpg" alt=""/>
+            <h3 className="title">{title[4]}</h3>
+            <div className="icons">
+            <a href="/companies" className="fas fa-share"></a>
+            
+            </div>
+        </div>
+
+        <div className="box">
+            <img src="/images/peshawar.jpg" alt=""/>
+            <h3 className="title">Peshawar</h3>
+            <div className="icons"> <a href="#" className="fas fa-share"></a>
+          
+            </div>
+        </div>
+
+     
+       
+    </div>
+
+</section>
+
 </>
 
   )

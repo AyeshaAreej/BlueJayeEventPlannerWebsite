@@ -29,10 +29,10 @@ function Companies() {
     
     <Row> 
     <Col></Col>
-    <Col  xs={6} style={{marginTop:'1%', borderColor :Colors.primary, margin:2, padding:7, borderWidth:2, elevation:25,borderRadius:15,  backgroundColor:'white'}}> 
+    <Col  xs={6} style={{ borderColor :Colors.primary,  padding:7, borderWidth:2, elevation:25,borderRadius:15,  backgroundColor:'white'}}> 
         <input type="search"  name="CompanySearch" placeholder='Search a Company or Vendor ' 
-        style={{ color:Colors.primary, borderColor:Colors.primary, fontSize:20,fontStyle:'oblique', width:'80%'}}/>
-        <Button style={{marginBottom:'2%', height: '86%',marginLeft:'1%', color:Colors.white, backgroundColor:Colors.primary}}>Search</Button>
+         style={{ color:Colors.primary, borderColor:Colors.primary, fontSize:25,fontStyle:'oblique', width:'80%'}}/>
+        <Button style={{marginBottom:'4%', height: '85%', fontSize:15, marginLeft:'1%', color:Colors.white, backgroundColor:Colors.primary}}>Search</Button>
     </Col>
     <Col></Col>
    </Row>

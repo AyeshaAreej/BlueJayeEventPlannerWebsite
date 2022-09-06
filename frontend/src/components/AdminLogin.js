@@ -19,7 +19,7 @@ function AdminLogin() {
                 <div className="login-contain">
                         <div className="left-side">
                          <div className="img-class">
-                              <img src={logo} id="img-id" alt="" style={{marginLeft:'35%'}} />
+                              <img src={logo} id="img-id" alt="" style={{marginLeft:'40%'}} />
                           </div>
                  
       <Formik  
@@ -50,22 +50,22 @@ function AdminLogin() {
            {touched.password && errors.password ? <div className='error' style={{  fontSize: 15, color: 'red',marginLeft:"15%", marginBottom:"2%"}}> {errors.password}</div> : null}
                             
                             
-          <button type="submit" id="sub_butt" style={{marginLeft:'8%'}}>Login</button>
+          <button type="submit" id="sub_butt" style={{marginLeft:'20%',width:'60%'}}>Login</button>
       
            </form>
            )}
            </Formik>  
         
-           <div className="footer">
+           <div >
            
-                <h4  style={{marginLeft:'8%'}}>Forgot Password? <Link className='link' to='#forgotpass'>Click Here</Link></h4>
+                <h4  style={{marginLeft:'8%',marginTop:'5%',fontSize:20,fontWeight:'bold'}}>Forgot Password? <Link className='link' to='#forgotpass'>Click Here</Link></h4>
            </div>
             </div>
                   <div className="right-side">
                     <div className="welcomeNote">
-                        <h3>Admin Login Only</h3>
+                        <h2>Admin Login Only</h2>
                     </div>
-                    <div className="welcomeImg">
+                    <div className="welcomeImg" style={{justifyContent:'center',marginTop:'18%',alignItems:'center'}}>
                         <img src={welcomeimg} id='wel-img-id' alt=""  style={{borderRadius:35}} />
                     </div>
                   </div>

@@ -1,54 +1,49 @@
+import '../../assets/css/style.css'
 import React,{Fragment} from 'react'
 import Colors from '../Colors'
 
 const Footer = () => {
   return (
     <Fragment >
-    <div style={{backgroundColor:Colors.primary, marginLeft:30, marginRight:30, borderRadius:25}}>
-     <footer className='footer'  >
-     <div className="container" >
-     <div className="row">  
+    <div>
+    <section className="footer">
 
-            <div className="col-4  offset-1 col-sm-2" style={{marginTop:60}}> 
-                    <h5 style={{color:Colors.white, fontSize:25}}>Links</h5>
-                    <ul class="list-unstyled">
-                        <li ><a style={{color:Colors.white }} href="/">Home</a></li>
-                        <li><a style={{color:Colors.white }} href="/register">Register</a></li>
-                        <li><a style={{color:Colors.white }} href="/login">Login</a></li>
-                    </ul>
-                </div>
+    <div className="box-container">
 
-                <div className="col-5 col-sm-5" style={{marginTop:60,  color:Colors.white}}> 
-                 <h5 style={{color:Colors.white, fontSize:25}} >Our Address</h5>
-                    <address>Sukkur IBA Univeristy, 
-                      <div>
-                      <i class="fa fa-phone fa-lg"></i>: +888 1234 5678 
-                      </div>
-                  <a href="mailto:Bjeventplanner@gmail.com">Bjeventplanner@gmail.com</a>
-		           </address>
-                </div>
-                 
-                 <div className="col-2" style={{marginTop:60,}}>
-                 <a class="btn btn-social-icon btn-google" href="http://google.com/+"><i style={{color:Colors.white, fontSize:25}}  class="fa fa-google-plus"></i></a>
-                 <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id="><i  style={{color:Colors.white, fontSize:25}} class="fa fa-facebook"></i></a>
-                        <a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"><i  style={{color:Colors.white, fontSize:25}} class="fa fa-linkedin"></i></a>
-                        <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i  style={{color:Colors.white, fontSize:25}} class="fa fa-twitter"></i></a>
-                        <a class="btn btn-social-icon btn-google" href="http://youtube.com/"><i  style={{color:Colors.white, fontSize:25}} class="fa fa-youtube"></i></a>
-                        <a class="btn btn-social-icon" href="mailto:" ><i  style={{color:Colors.white, fontSize:25 }}class="fa fa-envelope-o" ></i></a>
-                 </div>
+    
 
-            
-                
-      </div> 
-      
-      <div className="row justify-content-center">             
-                <div className="col-auto">
-                    <p  style={{color:Colors.white, }}>© Copyright 2022 Developer: Ayesha Areej</p>
-                </div>
-           </div> 
-     </div>
+        <div className="box">
+            <h3>quick links</h3>
+            <a href="#"> <i className="fas fa-arrow-right"></i> home </a>
+            <a href="#"> <i className="fas fa-arrow-right"></i> service </a>
+            <a href="#"> <i className="fas fa-arrow-right"></i> about </a>
+            <a href="#"> <i className="fas fa-arrow-right"></i> mobile app </a>
+            <a href="#"> <i className="fas fa-arrow-right"></i> cities </a>
+            <a href="#"> <i className="fas fa-arrow-right"></i> contact </a>
+        </div>
 
-     </footer>
+        <div className="box">
+            <h3>contact info</h3>
+            <a href="#"> <i className="fas fa-phone"></i> +123-456-7890 </a>
+            <a href="#"> <i className="fas fa-phone"></i> +111-222-3333 </a>
+            <a href="#"> <i className="fas fa-envelope"></i> BluejayEventPlanners@gmail.com </a>
+            <a href="#"> <i className="fas fa-map-marker-alt"></i> Sukkur, Sindh - Pakistan </a>
+        </div>
+
+        <div className="box">
+            <h3>follow us</h3>
+            <a href="#"> <i className="fab fa-facebook-f"></i> facebook </a>
+            <a href="#"> <i className="fab fa-twitter"></i> twitter </a>
+            <a href="#"> <i className="fab fa-instagram"></i> instagram </a>
+            <a href="#"> <i className="fab fa-linkedin"></i> linkedin </a>
+        </div>
+
+    </div>
+
+    <div className="credit"> created by <span>mr. web designer</span> | all rights reserved </div>
+
+</section>
+
      </div>
     </Fragment>
   )

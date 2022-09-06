@@ -15,6 +15,7 @@ import AdminProfile from './dashboard/AdminProfile';
 
 
 
+
 function App() {
   return (
     <> 
@@ -33,6 +34,7 @@ function App() {
            <Route  path='newCVDetails' element={ <NewCVDetails/> }/>
            <Route  path='contactDevelopers' element={ <ContactDevelopers/> }/>
            <Route  path='adminProfile' element={ <AdminProfile/> }/>
+       
         
            
              
