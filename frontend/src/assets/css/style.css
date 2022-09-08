@@ -17,7 +17,7 @@
 }
 
 html {
-  font-size: 65.5%;
+  font-size: 80%;
   overflow-x: hidden;
   scroll-padding-top: 7rem;
   scroll-behavior: smooth;
@@ -28,7 +28,7 @@ html::-webkit-scrollbar {
 }
 
 html::-webkit-scrollbar-track {
-  background: #fff;
+  background: #ac7494;
 }
 
 html::-webkit-scrollbar-thumb {
@@ -49,7 +49,7 @@ section {
   padding-bottom: 2rem;
   color: #fff;
   text-transform: uppercase;
-  font-size: 4rem;
+  font-size: 3.5rem;
 }
 
 .heading span {
@@ -89,7 +89,7 @@ section {
 .header .logo {
   font-weight: bolder;
   color: #fff;
-  font-size: 2.5rem;
+  font-size: 1.4rem;
 }
 
 .header .logo span {
@@ -97,7 +97,7 @@ section {
 }
 
 .header .navbar a {
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   color: #fff;
   margin-left: 2rem;
 }
@@ -175,7 +175,7 @@ section {
 }
 
 .service .box-container .box p {
-  font-size: 1.4rem;
+  font-size: 1.1rem;
   color: #eee;
   line-height: 1.8;
 }
@@ -188,7 +188,7 @@ section {
 }
 
 .about .row .image {
-  flex: 1 1 45rem;
+  flex: 1 1 36rem;
   padding: 1rem;
 }
 
@@ -199,16 +199,16 @@ section {
 }
 
 .about .row .content {
-  flex: 1 1 45rem;
+  flex: 1 1 50rem;
 }
 
 .about .row .content h3 {
-  font-size: 3.5rem;
-  color: #fff;
+  font-size: 2.5rem;
+  
 }
 
 .about .row .content p {
-  font-size: 1.5rem;
+  font-size: 1rem;
   color: #eee;
   padding: 1rem 0;
   line-height: 2;
@@ -237,7 +237,7 @@ section {
 
 .gallery .box-container .box:hover img {
   transform: scale(1.1);
-  filter: grayscale();
+
 }
 
 .gallery .box-container .box .title {
@@ -326,51 +326,7 @@ section {
   padding-right: 0.5rem;
 }
 
-.reivew .box {
-  border-radius: 0.5rem;
-  background: #333;
-  padding: 2rem;
-  position: relative;
-}
 
-.reivew .box .fa-quote-right {
-  position: absolute;
-  top: 2rem;
-  right: 2rem;
-  color: var(--main-color);
-  font-size: 5rem;
-}
-
-.reivew .box .user {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  padding-bottom: 1rem;
-}
-
-.reivew .box .user img {
-  height: 7rem;
-  width: 7rem;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-.reivew .box .user h3 {
-  font-size: 2rem;
-  color: #fff;
-}
-
-.reivew .box .user span {
-  font-size: 1.5rem;
-  color: #eee;
-}
-
-.reivew .box p {
-  line-height: 2;
-  color: #eee;
-  padding: 0.5rem 0;
-  font-size: 1.6rem;
-}
 
 .contact form {
   max-width: 70rem;
@@ -391,7 +347,7 @@ section {
   border-radius: 0.5rem;
   padding: 1rem;
   margin: 0.7rem 0;
-  font-size: 1.5rem;
+  font-size: 1.9rem;
   color: #fff;
   text-transform: none;
 }
@@ -399,6 +355,7 @@ section {
 .contact form .inputBox input::placeholder,
 .contact form textarea::placeholder {
   color: #eee;
+ 
   text-transform: capitalize;
 }
 
@@ -416,7 +373,7 @@ section {
 }
 
 .footer {
-  background: #ac7494;
+  background: #a6678b;
 }
 
 .footer .box-container {
@@ -567,7 +524,7 @@ section {
   }
 
   .home .content h3 {
-    font-size: 4rem;
+    font-size: 9rem;
   }
 }
 

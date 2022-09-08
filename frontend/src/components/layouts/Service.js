@@ -12,7 +12,7 @@ export default function Service() {
     <div className="box">
         <i className="fas fa-map-marker-alt"></i>
         <h3>venue selection</h3>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro, suscipit.</p>
+        <p>Venue selection isn't an easy task in today's world where too much events are being celebrated everyday</p>
     </div>
     <div className="box">
         <i className="fas fa-utensils"></i>

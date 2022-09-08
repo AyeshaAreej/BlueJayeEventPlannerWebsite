@@ -6,18 +6,17 @@ import Colors from '../Colors';
 function Header1() {
   return (
     <>
-      <div className="header">
+      <div className="header" style={{padding:0.3}}>
      <a href="#/" className="logo">
      <img
               alt=""
-              src="/images/logoheader2.png"
-              width="85"
-              height="55"
+              src="/images/MainLogo.png"
+            
             
             />
      <span>BlueJay</span>EventPlanners</a>
  
-<div className="navbar">
+<div className="navbar" style={{marginRight:'1%'}}>
     <a href="#home">home</a>
     <a href="#service">services</a>
     <a href="#about">about</a>

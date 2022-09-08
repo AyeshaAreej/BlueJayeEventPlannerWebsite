@@ -41,7 +41,7 @@ export default function ContactUs() {
     <textarea name="message" placeholder="your message" id="" cols="30" rows="10"></textarea>
     <input  style={{borderColor:Colors.white,fontSize:17,color:"#fff", borderRadius:25, backgroundColor:Colors.mainColor, borderWidth:4, width:'25%' ,}}
      type="submit" value="send message" className="btn"/>
-       {mssgState &&  <Alert style={{marginLeft:'1%', marginTop:'2%',color:Colors.white, backgroundColor:Colors.mainColor}} key="success" >
+       {mssgState &&  <Alert style={{marginLeft:'1%', marginTop:'1%',color:Colors.white, backgroundColor:Colors.mainColor}} key="success" >
           Message Sent Successfully!
         </Alert>}
 </form>

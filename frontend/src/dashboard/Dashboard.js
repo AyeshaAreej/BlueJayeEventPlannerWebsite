@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import styled from "styled-components";
 import Table from 'react-bootstrap/Table';
 
 export default class Dashboard extends Component {
@@ -12,12 +13,6 @@ export default class Dashboard extends Component {
         <div className="row mb-2">
           <div className="col-sm-6">
             <h1 className="m-0 text-dark">Dashboard</h1>
-          </div>{/* /.col */}
-          <div className="col-sm-6">
-            <ol className="breadcrumb float-sm-right">
-              <li className="breadcrumb-item"><a href="#">Home</a></li>
-              <li className="breadcrumb-item active">Dashboard v1</li>
-            </ol>
           </div>{/* /.col */}
         </div>{/* /.row */}
       </div>{/* /.container-fluid */}
@@ -128,25 +123,16 @@ export default class Dashboard extends Component {
             {/* TO DO List */}
             <div className="card"  style={{width:'100%'}}>
               <div className="card-header">
-                <h3 className="card-title">
+                <h1 className="card-title">
                   <i className="ion ion-clipboard mr-1" />
                   New Registrations
-                </h3>
-                <div className="card-tools">
-                  <ul className="pagination pagination-sm">
-                    <li className="page-item"><a href="#" className="page-link">«</a></li>
-                    <li className="page-item"><a href="#" className="page-link">1</a></li>
-                    <li className="page-item"><a href="#" className="page-link">2</a></li>
-                    <li className="page-item"><a href="#" className="page-link">3</a></li>
-                    <li className="page-item"><a href="#" className="page-link">»</a></li>
-                  </ul>
-                </div>
+                </h1>
               </div>
               {/* /.card-header */}
               <div>
                 <ul >
                 <Table striped bordered hover variant="light">
-        <thead>
+        <thead style={{fontSize:14}}>
         <tr>
           <th>#</th>
           <th>Business Name </th>
@@ -156,7 +142,7 @@ export default class Dashboard extends Component {
           <th></th>
         </tr>
       </thead>
-      <tbody>
+      <tbody style={{fontSize:14}}>
         <tr>
           <td>1</td>
           <td>Floral Weddings</td>
@@ -189,6 +175,7 @@ export default class Dashboard extends Component {
           <td>Approved</td>
           <td><a style={{color:'blue' }} href="#/deatils">Details</a></td>
         </tr>
+        
       </tbody>
     </Table>
  </ul>
@@ -320,3 +307,6 @@ export default class Dashboard extends Component {
         )
     }
 }
+
+
+

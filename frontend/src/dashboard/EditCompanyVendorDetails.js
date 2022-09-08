@@ -66,7 +66,11 @@ export default function EditCompanyVendorDetails() {
 
       <Col >
        <Card>
-         <Card.Header style={{color:Colors.dark, fontStyle:'oblique', fontSize:25}}>Edit</Card.Header>
+         <Card.Header style={{color:Colors.dark, fontStyle:'oblique', fontSize:25}}>
+        
+                  <span style={{color:Colors.primary, fontWeight:'bold',fontSize:25}}>  Edit</span>
+                
+       </Card.Header>
            <Card.Body style={{marginTop:"3%"}}>
       <Formik  
        initialValues={{

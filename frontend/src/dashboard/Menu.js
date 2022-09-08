@@ -9,7 +9,7 @@ export default class Menu extends Component {
       <aside className="main-sidebar sidebar-dark-primary elevation-4" style={{color:'#d176d0'}}>
          {/* Brand Logo */}
     <a href="index3.html" className="brand-link">
-      <img src="/images/logo2.1.png" alt="Logo" className="brand-image img-circle elevation-3" style={{opacity: '.8'}} />
+      <img src="/images/logo2.1.png" alt="Logo" className="brand-image img-circle elevation-3" style={{opacity: '.8', fontSize:27}} />
       <span className="brand-text font-weight-light">Admin Dashboard</span>
     </a>
     {/* Sidebar */}
@@ -32,15 +32,15 @@ export default class Menu extends Component {
 
             <li className="nav-item">
                 <a href="/dashboard" className="nav-link">
-                <FontAwesomeIcon icon={ faHome } className="nav-icon"/>
-                  <p>Dashboard </p>
+                <FontAwesomeIcon icon={ faHome } className="nav-icon" />
+                  <p style={{fontSize:14,fontWeight:'bold'}}>Dashboard </p>
                 </a>
               </li>
              
               <li className="nav-item">
                 <a href="/new" className="nav-link">
                 <FontAwesomeIcon icon={ faCartPlus } className="nav-icon"/>
-                <p>New Registrations</p>
+                <p style={{fontSize:14,fontWeight:'bold'}}>New Registrations</p>
                 </a>
               </li>
              
@@ -49,38 +49,38 @@ export default class Menu extends Component {
           <li className="nav-item">
                 <a href="/allCompanies" className="nav-link">
                 <FontAwesomeIcon icon={ faBuildingColumns } className="nav-icon"/>
-                <p>Companies</p>
+                <p style={{fontSize:14,fontWeight:'bold'}}>Companies</p>
                 </a>
             </li>
 
             <li className="nav-item">
                 <a href="/allVendors" className="nav-link">
                 <FontAwesomeIcon icon={ faBuilding } className="nav-icon"/>
-                <p>Vendors</p>
+                <p style={{fontSize:14,fontWeight:'bold'}}>Vendors</p>
                 </a>
             </li>
             <li className="nav-item">
                 <a href="/allUsers" className="nav-link">
                 <FontAwesomeIcon icon={ faUser } className="nav-icon"/>
-                <p>Users</p>
+                <p style={{fontSize:14,fontWeight:'bold'}}>Users</p>
                 </a>
             </li>
             <li className="nav-item">
                 <a href="dashboard/new" className="nav-link">
                 <FontAwesomeIcon icon={ faHandHoldingDollar } className="nav-icon"/>
-                <p>Profit</p>
+                <p style={{fontSize:14,fontWeight:'bold'}}>Profit</p>
                 </a>
             </li>
             <li className="nav-item">
                 <a href="/adminProfile" className="nav-link">
                 <FontAwesomeIcon icon={ faIdCard } className="nav-icon"/>
-                <p>Profile</p>
+                <p style={{fontSize:14,fontWeight:'bold'}}>Profile</p>
                 </a>
             </li>
             <li className="nav-item">
                 <a href="contactDevelopers" className="nav-link">
                 <FontAwesomeIcon icon={ faContactBook } className="nav-icon"/>
-                <p>Contact Developers</p>
+                <p style={{fontSize:14,fontWeight:'bold'}}>Contact Developers</p>
                 </a>
             </li>
     

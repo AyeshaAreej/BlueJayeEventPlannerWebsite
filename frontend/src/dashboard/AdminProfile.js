@@ -25,10 +25,10 @@ function AdminProfile() {
             <section className="col-lg-12 ">
             <div className="card"  style={{width:'100%'}}>
               <div className="card-header">
-                <h3 className="card-title">
-                  <i className="ion ion-clipboard mr-1" />
-                   Edit Profile
-                </h3>
+                <h1 className="card-title">
+                  <i className="ion ion-clipboard mr-1" style={{fontSize:30}} />
+                  <span style={{color:Colors.primary, fontWeight:'bold',fontSize:25}}>Edit Profile</span>
+                </h1>
               </div>
                     <Card  > <div style={{display: 'flex',  justifyContent:'center' , alignItems:'center', }}>
                     <img style={{ borderRadius:25,marginBottom:"5%"}}  src={background}  width="200"  height="150" alt="Profile Pic" />

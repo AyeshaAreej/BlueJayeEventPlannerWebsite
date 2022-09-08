@@ -203,8 +203,8 @@ const errorsStyle = {
 </Container>
 </section>
 
-<div style={{display: 'flex',color:Colors.white,  justifyContent:'center', alignItems:'center', marginTop:'5%', fontWeight:'bold', fontSize:45}}>
-    <h1>Steps to Activation</h1>
+<div style={{display: 'flex',color:Colors.primary,  justifyContent:'center', alignItems:'center', marginTop:'5%'}}>
+    <h1 style={{fontWeight:'bold', fontSize:30}}>Steps to Activation</h1>
 </div>
   
    <Container >
@@ -243,8 +243,8 @@ const errorsStyle = {
 
    {/* Our process */}
 
-   <div style={{display: 'flex',color:Colors.white,  justifyContent:'center', alignItems:'center', marginTop:'5%', fontWeight:'bold', fontSize:45}}>
-    <h1>How it works</h1>
+   <div style={{display: 'flex',color:Colors.primary,  justifyContent:'center', alignItems:'center', marginTop:'5%'}}>
+    <h1 style={{fontWeight:'bold', fontSize:30}}>How it works</h1>
 </div>
   
    <Container >

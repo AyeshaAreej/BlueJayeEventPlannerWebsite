@@ -5,6 +5,7 @@ import Button from 'react-bootstrap/Button';
 import Header from './Header';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPen , faTrash } from '@fortawesome/free-solid-svg-icons'
+import Colors from '../components/Colors';
 
 
 function AllUsers() {
@@ -20,16 +21,16 @@ function AllUsers() {
             <section className="col-lg-12 ">
             <div className="card"  style={{width:'100%'}}>
               <div className="card-header">
-                <h3 className="card-title">
-                  <i className="ion ion-clipboard mr-1" />
-                   Registered Users
-                </h3>
+                <h1 className="card-title">
+                  <i className="ion ion-clipboard mr-1"  style={{fontSize:30}} />
+                  <span style={{color:Colors.primary, fontWeight:'bold',fontSize:25}}>Registered Users</span>
+                </h1>
               </div>
               {/* /.card-header */}
               <div>
       <ul >
       <Table striped bordered hover variant="light">
-        <thead style={{fontSize:15}}>
+        <thead style={{fontSize:15,fontWeight:'bold',color:Colors.primary}}>
         <tr   >
           <th>#</th>
           <th style={{width:'14%',}}> Name </th>
@@ -44,7 +45,7 @@ function AllUsers() {
          
         </tr>
       </thead>
-      <tbody style={{fontSize:14}}>
+      <tbody style={{fontSize:13,fontWeight:'bold'}}>
         <tr >
           <td>1</td>
           <td>Ilyana</td>

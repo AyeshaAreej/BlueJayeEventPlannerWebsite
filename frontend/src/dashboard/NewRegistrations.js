@@ -4,6 +4,7 @@ import Menu from './Menu';
 import Header from './Header';
 import Button from 'react-bootstrap/Button';
 import { useNavigate } from 'react-router-dom';
+import Colors from '../components/Colors';
 
 
 
@@ -36,16 +37,16 @@ const HandleClick=()=>{
             <section className="col-lg-12 connectedSortable">
             <div className="card"  style={{width:'100%'}}>
               <div className="card-header">
-                <h3 className="card-title">
-                  <i className="ion ion-clipboard mr-1" />
-                  New Registrations
-                </h3>
+                <h1 className="card-title">
+                  <i className="ion ion-clipboard mr-1" style={{fontSize:30}} />
+                  <span style={{color:Colors.primary, fontWeight:'bold',fontSize:25}}>New Registrations</span>
+                </h1>
               </div>
               {/* /.card-header */}
               <div>
       <ul >
       <Table striped bordered hover variant="light">
-        <thead>
+        <thead style={{fontSize:15,fontWeight:'bold',color:Colors.primary}}>
         <tr   >
           <th>#</th>
           <th style={{width:'17%'}}>Business Name </th>
@@ -59,7 +60,7 @@ const HandleClick=()=>{
          
         </tr>
       </thead>
-      <tbody>
+      <tbody style={{fontSize:13,fontWeight:'bold'}}>
         <tr>
           <td>1</td>
           <td>Floral Weddings</td>

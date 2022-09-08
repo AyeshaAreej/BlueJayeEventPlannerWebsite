@@ -6,6 +6,7 @@ import Header from './Header';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPen , faTrash } from '@fortawesome/free-solid-svg-icons'
 import { useNavigate } from 'react-router-dom';
+import Colors from '../components/Colors';
 
 
 function AllVendors() {
@@ -46,17 +47,17 @@ function AllVendors() {
             <section className="col-lg-12 ">
             <div className="card"  style={{width:'100%'}}>
               <div className="card-header">
-                <h3 className="card-title">
-                  <i className="ion ion-clipboard mr-1" />
-                   Registered Vendors
-                </h3>
+                <h1 className="card-title">
+                  <i className="ion ion-clipboard mr-1" style={{fontSize:30}} />
+                  <span style={{color:Colors.primary, fontWeight:'bold',fontSize:25}}> Registered Vendors</span>
+                </h1>
               </div>
               {/* /.card-header */}
               <div>
       <ul >
       <Table striped bordered hover variant="light">
-        <thead style={{fontSize:15}}>
-        <tr   >
+        <thead style={{fontSize:15,fontWeight:'bold',color:Colors.primary}}>
+        <tr  >
           <th>#</th>
           <th style={{width:'14%',}}>Business Name </th>
           <th style={{width:'16%'}}>Business Type</th>
@@ -70,7 +71,7 @@ function AllVendors() {
          
         </tr>
       </thead>
-      <tbody style={{fontSize:14}}>
+      <tbody style={{fontSize:13,fontWeight:'bold'}}>
         <tr >
           <td>1</td>
           <td>Floral Weddings</td>
@@ -82,10 +83,10 @@ function AllVendors() {
           <td>500</td>
           <td>
           <div >
-           <Button  variant="success" style={{margin:'8%'}} onClick={HandleClick}>
+           <Button  variant="success"onClick={HandleClick}>
            <FontAwesomeIcon icon={ faPen } className="nav-icon"/>
            </Button>
-           <Button variant="danger" >
+           <Button variant="danger"  style={{marginLeft:'1%'}} >
            <FontAwesomeIcon icon={ faTrash } className="nav-icon"/>
            </Button></div>
           </td>
@@ -105,10 +106,10 @@ function AllVendors() {
           <td>
           
           
-          <Button  variant="success" style={{margin:'8%'}} onClick={HandleClick}>
+          <Button  variant="success"  onClick={HandleClick}>
            <FontAwesomeIcon icon={ faPen } className="nav-icon"/>
            </Button>
-           <Button variant="danger">
+           <Button variant="danger"  style={{marginLeft:'1%'}}>
            <FontAwesomeIcon icon={ faTrash } className="nav-icon"/>
            </Button>
           </td>
@@ -124,10 +125,10 @@ function AllVendors() {
           <td>300</td>
           <td>
           
-          <Button  variant="success" style={{margin:'8%'}} onClick={HandleClick}>
+          <Button  variant="success" onClick={HandleClick}>
            <FontAwesomeIcon icon={ faPen } className="nav-icon"/>
            </Button>
-           <Button variant="danger">
+           <Button variant="danger"  style={{marginLeft:'1%'}}>
            <FontAwesomeIcon icon={ faTrash } className="nav-icon"/>
            </Button>
           </td>
@@ -143,10 +144,10 @@ function AllVendors() {
           <td>200</td>
           <td>
           
-          <Button  variant="success" style={{margin:'8%'}} onClick={HandleClick} >
+          <Button  variant="success" onClick={HandleClick} >
            <FontAwesomeIcon icon={ faPen } className="nav-icon" />
            </Button>
-           <Button variant="danger">
+           <Button variant="danger"  style={{marginLeft:'1%'}}>
            <FontAwesomeIcon icon={ faTrash } className="nav-icon"/>
            </Button>
           </td>
