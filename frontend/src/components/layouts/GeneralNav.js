@@ -10,20 +10,22 @@ function GeneralNav() {
   
   return (
     <>
-      <div className="header" style={{padding:0.01}}>
-     <a href="#/" className="logo">
-     <img
+    
+      <Navbar sticky="top" className="header"> 
+     
+         
+          <a href="/register" className="logo">
+                   <img
               alt=""
               src="/images/MainLogo.png"
+              width="80"
+              height="70"
             
             
-            />
-     <span>BlueJay</span>EventPlanners</a>
- 
-
-    </div>
+            /> 
+           <span>BlueJay</span>EventPlanners</a>
    
-  
+      </Navbar>
     
     </>
   )

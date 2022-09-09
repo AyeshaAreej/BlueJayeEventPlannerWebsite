@@ -7,6 +7,7 @@ import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
+import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import Colors from './Colors';
 import GeneralNav from './layouts/GeneralNav';
 
@@ -52,12 +53,13 @@ let option="checkbox"
   if(type=== "Company")
   {
   option="checkbox";
-  console.log("inside company option",  option)
   companyOption=true;
+  console.log("inside company option",  option)
 }
 else if (type=== "Vendor")
 {
  option="radio"
+ vendorOption=true;
   console.log("inside vendor option", option )
 
 }
@@ -108,21 +110,21 @@ const errorsStyle = {
         </FloatingLabel>
 
         <FloatingLabel controlId="floatingSelect" label="Business Type" style={{Color: Colors.dark}}>
-      <Form.Select value={type} aria-label="Business Type"  required onChange={(e) => setType(e.target.value || null)}
-      //  {...register("role", { required : true })}  
- >      <option  value="null" >None</option>
-       <option  value="Company" >Company</option>
+      <Form.Select value={type} aria-label="Business Type"   aria-describedby="basic-addon1"   onChange={(e) => setType(e.target.value || null)}  {...register("business_type", { required : true })}>
+        <option  value="null" >None</option>
+        <option  value="Company" >Company</option>
         <option value="Vendor">Vendor</option>
       </Form.Select>
-      {/* <div style={errorsStyle}>{errors.role?.type === "required"  && "Business type  is required" }</div> */}
+      <div style={errorsStyle}>{errors.business_type?.type === "required"  && "Business type  is required" }</div>
 
 
     </FloatingLabel>
-    <div>
+   
+   {/* Company Services */}
     { companyOption &&  
     <div>
-    <FormLabel  style={{Color: Colors.dark}}> Services(Company)</FormLabel>
-    <div style={{display:'flex' , flexDirection:"row" }}>
+    <FormLabel  style={{Color: Colors.dark, fontSize:15}}> Select Services</FormLabel>
+    <div style={{display:'flex' , flexDirection:"row", fontSize:15, fontWeight:'bold'}}>
     <Form.Check  type="checkbox" label="Venue" value="Venue" onChange={(e)=>setMyServices( myService.concat(e.target.value))}/>
     <Form.Check  type="checkbox" label="Decoration" value="Decoration" onChange={(e)=>setMyServices( myService.concat(e.target.value))}  />
     <Form.Check  type="checkbox" label="Catering" value="Catering"  onChange={(e)=>setMyServices( myService.concat(e.target.value))}/>
@@ -130,50 +132,24 @@ const errorsStyle = {
    </div>
    </div>
    }
+  
+   {/* Vendor Service */}
+   { vendorOption &&  
+    <div>
+    <FormLabel  style={{Color: Colors.dark, fontSize:15}}> Select a Service</FormLabel>
+    <div style={{display:'flex' , flexDirection:"row", fontSize:15, fontWeight:'bold' }}>
+    <ButtonGroup aria-label="Basic example">
+    <Form.Check name="group1" type="radio" label="Venue" value="Venue" onChange={(e)=>setMyServices( e.target.value)}/>
+    <Form.Check name="group1" type="radio" label="Decoration" value="Decoration" onChange={(e)=>setMyServices( e.target.value)}  />
+    <Form.Check  name="group1" type="radio" label="Catering" value="Catering"  onChange={(e)=>setMyServices( e.target.value)}/>
+    <Form.Check name="group1" type="radio" label="Photography" value="Photography" onChange={(e)=>setMyServices( e.target.value)}  />
+    </ButtonGroup>
+    </div>
    </div>
+   }
    
  
-{/* services */}
-    {/* {[ option ].map((type) => (
-        <div key={`inline-${type}`} className="mb-3" style={{marginTop:'2%', fontSize:16}}>
-          <Form.Check
-            inline
-            label="Venue"
-            value="venue"
-            name="group1"
-            type={type}
-            id={`inline-${type}-1`}
-            // onChange={(e) =>{ setServices( services.concat(e.target.value))}}
-          />
-          <Form.Check
-            inline
-            label="Decoration"
-            name="group1"
-            value="decoration"
-            type={type}
-            id={`inline-${type}-2`}
-            // onChange={(e) =>{ setServices( services.concat(e.target.value))}}
-          />
-          <Form.Check
-            inline
-            label="Catering"
-            name="group1"
-            value="catering"
-            type={type}
-            id={`inline-${type}-3`}
-            // onChange={(e) =>{ setServices( services.concat(e.target.value))}}
-          />
-           <Form.Check
-            inline
-            label="Photography"
-            name="group1"
-            value="photography"
-            type={type}
-            id={`inline-${type}-4`}
-            // onChange={(e) =>{ setServices( services.concat(e.target.value))}}
-          />
-        </div>
-      ))} */}
+
 
       <FloatingLabel  style={{marginTop:"2%", }}  controlId="floatingInput formPlaintextPassword" label="Password" className="mb-3" >
         <Form.Control  type="password"  placeholder="Password"  aria-label="password"  aria-describedby="basic-addon1"  {...register("password", { required : true, minLength: 6 })}   />
