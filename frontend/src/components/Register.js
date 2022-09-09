@@ -18,31 +18,42 @@ import GeneralNav from './layouts/GeneralNav';
  import Step4 from '../assets/pic4.png';
  import advantage from '../assets/advantage.png';
  import tic from '../assets/tic.png';
- 
+ import Alert from 'react-bootstrap/Alert';
+import { FormLabel } from 'react-bootstrap';
 
 
 
 export default function Register() {
-
-  const [type, setType]=useState(null) ;
-  const [services, setServices] = useState([])
+ 
   
-  let service=[];
+   const [type, setType]=useState(null) ;
+   const[myService,setMyServices]=useState([])
+   const[formState, setFormState]=useState(false)
+    
+
   const { register, handleSubmit, watch, formState: { errors } } = useForm()
-  const onSubmit = data => console.log(data);
+  const onSubmit = data => {
+    
+    console.log(data)
+    setFormState(true)
+
+  };
 
 
 //type is role vendor or company
 console.log("type is",type)
-console.log("services are",service)
+console.log("services are",myService)
 
 
 //dynamic selection of checkbox and radio box
+let companyOption=false
+let vendorOption=false
 let option="checkbox"
   if(type=== "Company")
   {
   option="checkbox";
   console.log("inside company option",  option)
+  companyOption=true;
 }
 else if (type=== "Vendor")
 {
@@ -104,9 +115,26 @@ const errorsStyle = {
         <option value="Vendor">Vendor</option>
       </Form.Select>
       {/* <div style={errorsStyle}>{errors.role?.type === "required"  && "Business type  is required" }</div> */}
+
+
     </FloatingLabel>
+    <div>
+    { companyOption &&  
+    <div>
+    <FormLabel  style={{Color: Colors.dark}}> Services(Company)</FormLabel>
+    <div style={{display:'flex' , flexDirection:"row" }}>
+    <Form.Check  type="checkbox" label="Venue" value="Venue" onChange={(e)=>setMyServices( myService.concat(e.target.value))}/>
+    <Form.Check  type="checkbox" label="Decoration" value="Decoration" onChange={(e)=>setMyServices( myService.concat(e.target.value))}  />
+    <Form.Check  type="checkbox" label="Catering" value="Catering"  onChange={(e)=>setMyServices( myService.concat(e.target.value))}/>
+    <Form.Check  type="checkbox" label="Photography" value="Photography" onChange={(e)=>setMyServices( myService.concat(e.target.value))}  />
+   </div>
+   </div>
+   }
+   </div>
+   
+ 
 {/* services */}
-    {[ option ].map((type) => (
+    {/* {[ option ].map((type) => (
         <div key={`inline-${type}`} className="mb-3" style={{marginTop:'2%', fontSize:16}}>
           <Form.Check
             inline
@@ -115,7 +143,7 @@ const errorsStyle = {
             name="group1"
             type={type}
             id={`inline-${type}-1`}
-            onChange={(e) =>{ setServices( services.concat(e.target.value))}}
+            // onChange={(e) =>{ setServices( services.concat(e.target.value))}}
           />
           <Form.Check
             inline
@@ -124,7 +152,7 @@ const errorsStyle = {
             value="decoration"
             type={type}
             id={`inline-${type}-2`}
-            onChange={(e) =>{ setServices( services.concat(e.target.value))}}
+            // onChange={(e) =>{ setServices( services.concat(e.target.value))}}
           />
           <Form.Check
             inline
@@ -133,7 +161,7 @@ const errorsStyle = {
             value="catering"
             type={type}
             id={`inline-${type}-3`}
-            onChange={(e) =>{ setServices( services.concat(e.target.value))}}
+            // onChange={(e) =>{ setServices( services.concat(e.target.value))}}
           />
            <Form.Check
             inline
@@ -142,10 +170,10 @@ const errorsStyle = {
             value="photography"
             type={type}
             id={`inline-${type}-4`}
-            onChange={(e) =>{ setServices( services.concat(e.target.value))}}
+            // onChange={(e) =>{ setServices( services.concat(e.target.value))}}
           />
         </div>
-      ))}
+      ))} */}
 
       <FloatingLabel  style={{marginTop:"2%", }}  controlId="floatingInput formPlaintextPassword" label="Password" className="mb-3" >
         <Form.Control  type="password"  placeholder="Password"  aria-label="password"  aria-describedby="basic-addon1"  {...register("password", { required : true, minLength: 6 })}   />
@@ -192,6 +220,9 @@ const errorsStyle = {
 
         <div className="d-grid gap-2">
      <Button size="lg" type="submit" style={{ marginBottom:"2%" ,color:Colors.white, backgroundColor:Colors.primary, borderColor:Colors.primary }}> Submit</Button>
+     {formState &&  <Alert style={{marginLeft:'1%', marginTop:'1%',color:Colors.white, backgroundColor:Colors.mainColor}} key="success" >
+         Form Submitted Successfully!
+        </Alert>}
     </div> 
   </form>
  

@@ -10,26 +10,21 @@ function GeneralNav() {
   
   return (
     <>
-
-    
-    <Navbar  sticky="top" variant="dark" style={{backgroundColor:Colors.mainColor}}>
-        <Container>
-          <Navbar.Brand href="/" style={{fontSize:28,}}>
-            <img
+      <div className="header" style={{padding:0.01}}>
+     <a href="#/" className="logo">
+     <img
               alt=""
-              src="/images/logoheader2.png"
-              width="50"
-              height="50"
-              className="d-inline-block align-top "
+              src="/images/MainLogo.png"
+            
+            
             />
-            <span style={{color:Colors.white}} >Blue Jay Event Planners</span>
-          </Navbar.Brand>
-        </Container>
-      </Navbar>
+     <span>BlueJay</span>EventPlanners</a>
+ 
+
+    </div>
    
   
-  
-   
+    
     </>
   )
 }
