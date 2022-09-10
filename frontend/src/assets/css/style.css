@@ -155,7 +155,7 @@ section {
   border-radius: 0.5rem;
   background: #ac7494;
   text-align: center;
-  padding: 2.5rem;
+  padding: 1.5rem;
 }
 
 .service .box-container .box i {
@@ -163,7 +163,7 @@ section {
   width: 6rem;
   line-height: 6rem;
   border-radius: 50%;
-  font-size: 2.5rem;
+  font-size: 2rem;
   background: #ecd1c4;
   color: #fff;
 }

@@ -99,23 +99,23 @@ const errorsStyle = {
 
         <form id='form'  onSubmit={handleSubmit(onSubmit)}>
 
-        <FloatingLabel  style={{marginTop:"2%", }}  controlId="floatingInput" label="Business Name" className="mb-2">
+        <FloatingLabel  style={{marginTop:"2%", }}  controlId="floatingInput1" label="Business Name" className="mb-2">
         <Form.Control placeholder="Business Name"  aria-label="company_name"  aria-describedby="basic-addon1"  {...register("company_name", { required : true })}   />
         <div style={errorsStyle}>{errors.company_name?.type === "required"  && "Business Name is required" }</div>
         </FloatingLabel>
        
-        <FloatingLabel  style={{marginTop:"2%", }}  controlId="floatingInput" label="Email" className="mb-3">
+        <FloatingLabel  style={{marginTop:"2%", }}  controlId="floatingInput2" label="Email" className="mb-3">
         <Form.Control placeholder="Email"  aria-label="Email"  aria-describedby="basic-addon1"  {...register("email", { required : true })}   />
         <div style={errorsStyle}>{errors.email?.type === "required"  && "Email is required" }</div>
         </FloatingLabel>
 
         <FloatingLabel controlId="floatingSelect" label="Business Type" style={{Color: Colors.dark}}>
-      <Form.Select value={type} aria-label="Business Type"   aria-describedby="basic-addon1"   onChange={(e) => setType(e.target.value || null)}  {...register("business_type", { required : true })}>
+      <Form.Select value={type} aria-label="Business Type"   aria-describedby="basic-addon1"   onChange={(e) => setType(e.target.value || null)}>
         <option  value="null" >None</option>
         <option  value="Company" >Company</option>
         <option value="Vendor">Vendor</option>
       </Form.Select>
-      <div style={errorsStyle}>{errors.business_type?.type === "required"  && "Business type  is required" }</div>
+      {/* <div style={errorsStyle}>{errors.business_type?.type === "required"  && "Business type  is required" }</div> */}
 
 
     </FloatingLabel>
@@ -151,35 +151,35 @@ const errorsStyle = {
  
 
 
-      <FloatingLabel  style={{marginTop:"2%", }}  controlId="floatingInput formPlaintextPassword" label="Password" className="mb-3" >
+      <FloatingLabel  style={{marginTop:"2%", }}  controlId="floatingInput3 formPlaintextPassword" label="Password" className="mb-3" >
         <Form.Control  type="password"  placeholder="Password"  aria-label="password"  aria-describedby="basic-addon1"  {...register("password", { required : true, minLength: 6 })}   />
         <div style={errorsStyle}>{errors.password?.type === "required"  && "Password is required" }</div>
         <div style={errorsStyle}> {errors.password?.type === "minLength" && "At least 6 characters are required"}</div>
         </FloatingLabel>
 
-        <FloatingLabel  style={{marginTop:"2%", }}  controlId="floatingInput " label="Phone Number" className="mb-3" >
+        <FloatingLabel  style={{marginTop:"2%", }}  controlId="floatingInput4 " label="Phone Number" className="mb-3" >
         <Form.Control  type="number"  placeholder="Phone Number"  aria-label="Phone Number"  aria-describedby="basic-addon1"  {...register("phone_no", { required : true , minLength: 11, maxLength:12 })}   />
         <div style={errorsStyle}>{errors.phone_no?.type === "required"  && "Phone number is required" }</div>
         <div style={errorsStyle}>{errors.phone_no?.type === "minLength"  && "At least 11 characters are required" }</div>
         <div style={errorsStyle}>{errors.phone_no?.type === "maxLength"  && "Max Length Exceed" }</div>
         </FloatingLabel>
 
-        <FloatingLabel  style={{marginTop:"2%", }}  controlId="floatingInput " label="City" className="mb-3" >
+        <FloatingLabel  style={{marginTop:"2%", }}  controlId="floatingInput5 " label="City" className="mb-3" >
         <Form.Control  type="text"  placeholder="City"  aria-label="city"  aria-describedby="basic-addon1"  {...register("city", { required : true })}   />
         <div style={errorsStyle}>{errors.city?.type === "required"  && "City is required" }</div>
         </FloatingLabel>
 
-        <FloatingLabel  style={{marginTop:"2%", }}  controlId="floatingInput " label="Address" className="mb-3" >
+        <FloatingLabel  style={{marginTop:"2%", }}  controlId="floatingInput6 " label="Address" className="mb-3" >
         <Form.Control  type="text"  placeholder="Address"  aria-label="address"  aria-describedby="basic-addon1"  {...register("address", { required : true })}   />
         <div style={errorsStyle}>{errors.address?.type === "required"  && "Address is required" }</div>
         </FloatingLabel>
 
-        <FloatingLabel  style={{marginTop:"2%", }}  controlId="floatingInput " label="Price Range" className="mb-3" >
+        <FloatingLabel  style={{marginTop:"2%", }}  controlId="floatingInput7 " label="Price Range" className="mb-3" >
         <Form.Control  type="number"  placeholder="Price Range"  aria-label="price_range"  aria-describedby="basic-addon1"  {...register("price_range", { required : true })}   />
         <div style={errorsStyle}>{errors.price_range?.type === "required"  && "Price Range is required" }</div>
         </FloatingLabel>
 
-        <FloatingLabel  style={{marginTop:"2%", }}  controlId="floatingInput " label="Availability Hours" className="mb-3" >
+        <FloatingLabel  style={{marginTop:"2%", }}  controlId="floatingInput8 " label="Availability Hours" className="mb-3" >
         <Form.Control  type="number"  placeholder="Availability Hours"  aria-label="availability_hours"  aria-describedby="basic-addon1"  {...register("available_hours", { required : true, maxLength:2 })}   />
         <div style={errorsStyle}>{errors.available_hours?.type === "required"  && "Available hours are required" }</div>
         <div style={errorsStyle}>{errors.available_hours?.type === "maxLength"  && "Max Length Exceed" }</div>
