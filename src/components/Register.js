@@ -227,7 +227,7 @@ const errorsStyle = {
     <Row style={{marginTop:"2%", fontSize:16, color:Colors.primary}}>
 
       <Col><span style={{fontWeight:'bold', fontSize:20}}>Step 1:</span><br/> Register online </Col>
-      <Col ><span style={{fontWeight:'bold', fontSize:20}}>Step 3:</span><br/> BlueJay Event Planners send the contract </Col>
+      <Col ><span style={{fontWeight:'bold', fontSize:20}}>Step 2:</span><br/> BlueJay Event Planners send the contract </Col>
       <Col><span style={{fontWeight:'bold', fontSize:20}}>Step 3:</span><br/> Sign the contract </Col>
       <Col ><span style={{fontWeight:'bold', fontSize:20}}>Step 4:</span><br/> Go live on BlueJay Event Planner's Mobile app </Col>
     
@@ -236,7 +236,7 @@ const errorsStyle = {
 
    <Container  style={{backgroundColor:Colors.mainColor, marginTop:"5%", marginBottom:'5%'}}>
     <Row>
-      <Col ><img src={advantage} alt="step1" width="250"  height="270" style={{marginTop:"5%", marginBottom:'5%', borderRadius:20}} /></Col>  
+      <Col ><img src={advantage} alt="step1" width="290"  height="270" style={{margin:"5%", marginBottom:'7%', marginTop:'7%', borderRadius:20}} /></Col>  
       <Col xs={6}>
         <Row> <Col style={{color:Colors.white, marginTop:"5%", marginBottom:'5%', fontSize:26, fontWeight:"bold"}}> Advantage of Joining us </Col> </Row>
         <Row> <Col> <img src={tic} alt="tic" width="30" height="30" style={{borderRadius:24, marginRight:'4%'}}/><span style={{color:Colors.white,fontWeight:"bold", fontSize:20}}>More Revenue</span>  <p style={{color:Colors.white,marginLeft:'10%',fontSize:16}}>With BlueJay Event Planners, you will gain an additional source of income.</p> </Col> </Row>

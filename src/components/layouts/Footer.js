@@ -14,12 +14,13 @@ const Footer = () => {
 
         <div className="box">
             <h3>quick links</h3>
-            <a href="#"> <i className="fas fa-arrow-right"></i> home </a>
-            <a href="#"> <i className="fas fa-arrow-right"></i> service </a>
-            <a href="#"> <i className="fas fa-arrow-right"></i> about </a>
-            <a href="#"> <i className="fas fa-arrow-right"></i> mobile app </a>
-            <a href="#"> <i className="fas fa-arrow-right"></i> cities </a>
-            <a href="#"> <i className="fas fa-arrow-right"></i> contact </a>
+            <a href="/#home"> <i className="fas fa-arrow-right"></i> home </a>
+            <a href="/#service"> <i className="fas fa-arrow-right"></i> service </a>
+            <a href="/#about"> <i className="fas fa-arrow-right"></i> about </a>
+            <a href="/#mobileApp"> <i className="fas fa-arrow-right"></i> mobile app </a>
+            <a href="/#contact"> <i className="fas fa-arrow-right"></i> contact </a>
+
+
         </div>
 
         <div className="box">
