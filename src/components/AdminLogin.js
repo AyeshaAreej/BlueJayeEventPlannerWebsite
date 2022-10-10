@@ -27,7 +27,29 @@ function AdminLogin() {
        email:'',
        password:'',}}
        onSubmit={ (values) => {
-         console.log(values)}
+
+              // console.log(values)
+              
+              const value = {
+                email: values.email,
+                password: values.password
+              }
+              
+              fetch(`https://bluejay-mobile-app.herokuapp.com/admin/logIn`,{
+                method: "post",
+                body: JSON.stringify(value),
+                headers: {
+                    Accept: "application/json, text/plain, */*",
+                    "Content-Type": "application/json"
+                }   
+                
+                    
+                }).then(res=>res.json()).then(result=>
+                  {
+                    console.log(result)
+                  }).catch(err=>console.log(err.message))
+
+        }
         }
        validationSchema={Yup.object().shape({
          email: Yup.string()

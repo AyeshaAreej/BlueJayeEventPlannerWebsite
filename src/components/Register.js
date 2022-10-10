@@ -28,22 +28,137 @@ export default function Register() {
  
   
    const [type, setType]=useState(null) ;
-   const[myService,setMyServices]=useState([])
+   const[checkedV,setCheckedV]=useState(false)
+   const[checkedD,setCheckedD]=useState(false)
+   const[checkedC,setCheckedC]=useState(false)
+   const[checkedP,setCheckedP]=useState(false)
    const[formState, setFormState]=useState(false)
+   const[error, setError]=useState(false)
     
 
   const { register, handleSubmit, watch, formState: { errors } } = useForm()
   const onSubmit = data => {
     
-    console.log(data)
-    setFormState(true)
+
+if(type=== "Company"){
+    var services_string = ''
+    // console.log(data)
+
+    if(checkedC){
+      services_string+='Catering '
+    }
+    if(checkedV){
+      services_string+='Venue '
+    }
+    if(checkedD){
+      services_string+='Decoration '
+    }
+    if(checkedP){
+      services_string+='Photography '
+    }
+
+
+    const value = {
+      company_name:data.company_name, 
+      email: data.email ,
+      password: data.password,
+      phone_no: data.phone_no, 
+      city: data.city,
+      services: services_string,
+      price_range: data.price_range,
+      address: data.address,
+      available_hours: data.available_hours,
+     }
+
+console.log(value)
+
+ fetch(`https://bluejay-mobile-app.herokuapp.com/company/signUp`,{
+        method: "post",
+        body: JSON.stringify(value),
+        headers: {
+            Accept: "application/json, text/plain, */*",
+            "Content-Type": "application/json"
+        }   
+        
+      
+   }).then(res=>res.json()).then(result=>
+    {
+      console.log(result)
+      if(result.status=='ok'){
+        setFormState(true)
+      }else{
+        setError(true)
+      }
+     }).catch(err=>{
+     
+      console.log(err.message)
+      
+    })
+
+  }else if (type=== "Vendor"){
+    
+    var services_string = ''
+    // console.log(data)
+
+    if(checkedC){
+      services_string='Caterer'
+    }
+    if(checkedV){
+      services_string='Venue'
+    }
+    if(checkedD){
+      services_string='Decoration'
+    }
+    if(checkedP){
+      services_string='Photography'
+    }
+
+
+    const value = {
+      vendor_name:data.company_name, 
+      email: data.email ,
+      password: data.password,
+      phone_no: data.phone_no, 
+      city: data.city,
+      service: services_string,
+      price_range: data.price_range,
+      address: data.address,
+      available_hours: data.available_hours,
+     }
+
+console.log(value)
+
+ fetch(`https://bluejay-mobile-app.herokuapp.com/vendor/signUp`,{
+        method: "post",
+        body: JSON.stringify(value),
+        headers: {
+            Accept: "application/json, text/plain, */*",
+            "Content-Type": "application/json"
+        }   
+        
+      
+   }).then(res=>res.json()).then(result=>
+    {
+      console.log(result)
+      if(result.status=='ok'){
+        setFormState(true)
+      }else{
+        setError(true)
+      }
+     }).catch(err=>{
+     
+      console.log(err.message)
+      
+    })
+
+  }
 
   };
 
 
 //type is role vendor or company
-console.log("type is",type)
-console.log("services are",myService)
+// console.log("type is",type)
+// console.log("services are",myService)
 
 
 //dynamic selection of checkbox and radio box
@@ -54,17 +169,17 @@ let option="checkbox"
   {
   option="checkbox";
   companyOption=true;
-  console.log("inside company option",  option)
+  // console.log("inside company option",  option)
 }
 else if (type=== "Vendor")
 {
  option="radio"
  vendorOption=true;
-  console.log("inside vendor option", option )
+  // console.log("inside vendor option", option )
 
 }
  
-console.log(option)
+// console.log(option)
 
  
 // errors styling
@@ -125,10 +240,46 @@ const errorsStyle = {
     <div>
     <FormLabel  style={{Color: Colors.dark, fontSize:15}}> Select Services</FormLabel>
     <div style={{display:'flex' , flexDirection:"row", fontSize:15, fontWeight:'bold'}}>
-    <Form.Check  type="checkbox" label="Venue" value="Venue" onChange={(e)=>setMyServices( myService.concat(e.target.value))}/>
-    <Form.Check  type="checkbox" label="Decoration" value="Decoration" onChange={(e)=>setMyServices( myService.concat(e.target.value))}  />
-    <Form.Check  type="checkbox" label="Catering" value="Catering"  onChange={(e)=>setMyServices( myService.concat(e.target.value))}/>
-    <Form.Check  type="checkbox" label="Photography" value="Photography" onChange={(e)=>setMyServices( myService.concat(e.target.value))}  />
+    <Form.Check  type="checkbox" label="Venue" value="Venue" 
+    onChange={(e)=>{
+      if(!checkedV){
+        setCheckedV(!checkedV)
+      }else{
+        setCheckedV(!checkedV)
+      }
+      
+    }}
+    />
+    <Form.Check  type="checkbox" label="Decoration" value="Decoration" 
+    onChange={(e)=>{
+      if(!checkedD){
+        setCheckedD(!checkedD)
+      }else{
+        setCheckedD(!checkedD)
+      }
+      
+    }}
+      />
+    <Form.Check  type="checkbox" label="Catering" value="Catering"  
+    onChange={(e)=>{
+      if(!checkedC){
+        setCheckedC(!checkedC)
+      }else{
+        setCheckedC(!checkedC)
+      }
+      
+    }}
+    />
+    <Form.Check  type="checkbox" label="Photography" value="Photography" 
+    onChange={(e)=>{
+      if(!checkedP){
+        setCheckedP(!checkedP)
+      }else{
+        setCheckedP(!checkedP)
+      }
+      
+    }}
+     />
    </div>
    </div>
    }
@@ -139,10 +290,39 @@ const errorsStyle = {
     <FormLabel  style={{Color: Colors.dark, fontSize:15}}> Select a Service</FormLabel>
     <div style={{display:'flex' , flexDirection:"row", fontSize:15, fontWeight:'bold' }}>
     <ButtonGroup aria-label="Basic example">
-    <Form.Check name="group1" type="radio" label="Venue" value="Venue" onChange={(e)=>setMyServices( e.target.value)}/>
-    <Form.Check name="group1" type="radio" label="Decoration" value="Decoration" onChange={(e)=>setMyServices( e.target.value)}  />
-    <Form.Check  name="group1" type="radio" label="Catering" value="Catering"  onChange={(e)=>setMyServices( e.target.value)}/>
-    <Form.Check name="group1" type="radio" label="Photography" value="Photography" onChange={(e)=>setMyServices( e.target.value)}  />
+    <Form.Check name="group1" type="radio" label="Venue" value="Venue" onChange={(e)=>{
+      if(!checkedV){
+        setCheckedV(!checkedV)
+      }else{
+        setCheckedV(!checkedV)
+      }
+      
+    }}/>
+    <Form.Check name="group1" type="radio" label="Decoration" value="Decoration" onChange={(e)=>{
+      if(!checkedD){
+        setCheckedD(!checkedD)
+      }else{
+        setCheckedD(!checkedD)
+      }
+      
+    }} />
+    <Form.Check  name="group1" type="radio" label="Catering" value="Catering"  onChange={(e)=>{
+      if(!checkedC){
+        setCheckedC(!checkedC)
+      }else{
+        setCheckedC(!checkedC)
+      }
+      
+    }}/>
+    <Form.Check name="group1" type="radio" label="Photography" value="Photography" onChange={(e)=>{
+      if(!checkedP){
+        setCheckedP(!checkedP)
+      }else{
+        setCheckedP(!checkedP)
+      }
+      
+    }}
+    />
     </ButtonGroup>
     </div>
    </div>
@@ -180,7 +360,7 @@ const errorsStyle = {
         </FloatingLabel>
 
         <FloatingLabel  style={{marginTop:"2%", }}  controlId="floatingInput8 " label="Availability Hours" className="mb-3" >
-        <Form.Control  type="number"  placeholder="Availability Hours"  aria-label="availability_hours"  aria-describedby="basic-addon1"  {...register("available_hours", { required : true, maxLength:2 })}   />
+        <Form.Control  type="text"  placeholder="Availability Hours"  aria-label="availability_hours"  aria-describedby="basic-addon1"  {...register("available_hours", { required : true })}   />
         <div style={errorsStyle}>{errors.available_hours?.type === "required"  && "Available hours are required" }</div>
         <div style={errorsStyle}>{errors.available_hours?.type === "maxLength"  && "Max Length Exceed" }</div>
         </FloatingLabel>
@@ -196,9 +376,13 @@ const errorsStyle = {
 
         <div className="d-grid gap-2">
      <Button size="lg" type="submit" style={{ marginBottom:"2%" ,color:Colors.white, backgroundColor:Colors.primary, borderColor:Colors.primary }}> Submit</Button>
-     {formState &&  <Alert style={{marginLeft:'1%', marginTop:'1%',color:Colors.white, backgroundColor:Colors.mainColor}} key="success" >
+     {formState &&   <Alert style={{marginLeft:'1%', marginTop:'1%',color:Colors.white, backgroundColor:Colors.mainColor}} key="success" >
          Form Submitted Successfully!
         </Alert>}
+        {error && <Alert style={{marginLeft:'1%', marginTop:'1%',color:Colors.white, backgroundColor:Colors.error}} key="error" >
+         Error! Submit again with correct Information
+        </Alert>}
+        
     </div> 
   </form>
  
