@@ -30,25 +30,7 @@ function Header1() {
     </div>
    
   
-      {/* <Navbar sticky="top" variant="dark" style={{backgroundColor:Colors.primary}}>
-        <Container style={{justifyContent:'center', alignItems:'center'}}>
-          <Navbar.Brand href="#register" style={{fontSize:29, }}>
-            <img
-              alt=""
-              src="/images/logo2.1.png"
-              width="52"
-              height="52"
-              className="d-inline-block align-top "
-             
-            />
-            <span style={{color:Colors.white,}} >Do you want to do business with us?</span>
-            <Button style={{marginLeft:10,borderColor:Colors.white, borderWidth:2, color:Colors.white}} variant="outline-primary"
-            href="/register">
-            
-            Register Now</Button>
-          </Navbar.Brand>
-        </Container>
-      </Navbar> */}
+     
     </>
   );
 }
