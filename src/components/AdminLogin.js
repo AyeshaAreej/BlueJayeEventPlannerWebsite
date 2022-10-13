@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import {Link,useNavigate} from 'react-router-dom';
 import logo from '../assets/download.jpg';
 import welcomeimg from '../assets/loginimag2.PNG';
 import '../Login.css';
@@ -10,7 +10,7 @@ import * as Yup from 'yup';
 
 function AdminLogin() {
   
-
+  const navigate = useNavigate();
   return (
     <>
     <GeneralNav/>
@@ -41,12 +41,11 @@ function AdminLogin() {
                 headers: {
                     Accept: "application/json, text/plain, */*",
                     "Content-Type": "application/json"
-                }   
-                
-                    
+                }
                 }).then(res=>res.json()).then(result=>
                   {
-                    console.log(result)
+                    console.log('success',result)
+                    navigate("/dashboard")
                   }).catch(err=>console.log(err.message))
 
         }

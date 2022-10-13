@@ -2,6 +2,7 @@ import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import Button from 'react-bootstrap/Button';
 import Colors from '../Colors';
+import Dropdown from 'react-bootstrap/Dropdown';
 
 function Header1() {
   return (
@@ -16,7 +17,7 @@ function Header1() {
             />
      <span>BlueJay</span>EventPlanners</a>
  
-<div className="navbar" style={{marginRight:'1%'}}>
+<div className="navbar" style={{marginRight:'0.8%'}}>
     <a href="#home">home</a>
     <a href="#service">services</a>
     <a href="#about">about</a>
@@ -26,7 +27,24 @@ function Header1() {
     <a href="/login">Admin Login</a>
 </div>
 
-<div id="menu-bars" className="fas fa-bars"></div>
+
+{/* <div id="menu-bars" className="fas fa-bars"></div> */}
+{/* <ul>
+     <li className="nav-item dropdown">
+       <a className="nav-link" data-toggle="dropdown" href="#/"  data-widget="control-sidebar" data-slide="true">
+         <i className="fas fa-th-large" style={{ fontSize:50 }}/>
+        
+       </a>
+       <div className="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+       
+           <Dropdown.Item eventKey="1" href="/adminProfile" style={{fontSize:15}}>Profile</Dropdown.Item>
+           <Dropdown.Item eventKey="2" href="/dashboard" style={{fontSize:15}}>Dashboard</Dropdown.Item>
+           <Dropdown.Divider />
+           <Dropdown.Item eventKey="4"style={{fontSize:15}}>Log Out</Dropdown.Item>
+         
+       </div>
+     </li>
+   </ul> */}
     </div>
    
   

@@ -16,7 +16,7 @@ function AdminProfile() {
   return (
     <>
     <Header/>
-    {/* <Header/> */}
+   
     <div >
   
 
@@ -34,13 +34,36 @@ function AdminProfile() {
                     <img style={{ borderRadius:25,marginBottom:"5%"}}  src={background}  width="200"  height="150" alt="Profile Pic" />
                     </div>
                     
-                    <Formik  
+       <Formik  
        initialValues={{
        email:'',
-       currentPass:'',
+       password:'',
        newPass:'',}}
        onSubmit={ (values) => {
-         console.log(values)}
+        //  console.log(values)
+        
+           
+        const value = {
+                email: values.email,
+                password: values.password,
+                newPass:values.newPass
+              }
+              fetch(`https://bluejay-mobile-app.herokuapp.com/admin/changePassword`,{
+                method: "post",
+                body: JSON.stringify(value),
+                headers: {
+                    Accept: "application/json, text/plain, */*",
+                    "Content-Type": "application/json"
+                }   
+                
+                    
+                }).then(res=>res.json()).then(result=>
+                  {
+                    console.log(result)
+                  }).catch(err=>console.log(err.message))
+
+
+        }
         }
        validationSchema={Yup.object().shape({
          email: Yup.string()
@@ -49,7 +72,7 @@ function AdminProfile() {
         newPass: Yup.string()
         .min(6, "Password must be 6 characters at minimum")
         .required("New Password is required"),
-        currentPass: Yup.string()
+        password: Yup.string()
         .min(6, "Password must be 6 characters at minimum")
         .required("Current Password is required") })}
         >  
@@ -65,9 +88,9 @@ function AdminProfile() {
           {touched.email && errors.email ? <div className='error' style={{  fontSize: 15, color: 'red', marginBottom:"2%"}}> {errors.email}</div> : null}
         
           <FloatingLabel controlId="floatingInput" label="Current Password"   className="mb-3"  >
-          <Form.Control style={{width:300}} type="password" name='currentPass' placeholder="......" onBlur={handleBlur} onChange={handleChange} value={values.currentPass} /> 
+          <Form.Control style={{width:300}} type="password" name='password' placeholder="......" onBlur={handleBlur} onChange={handleChange} value={values.password} /> 
           </FloatingLabel>
-          {touched.currentPass && errors.currentPass? <div className='error' style={{  fontSize: 15, color: 'red', marginBottom:"2%"}}> {errors.currentPass}</div> : null}
+          {touched.password  && errors.password? <div className='error' style={{  fontSize: 15, color: 'red', marginBottom:"2%"}}> {errors.password}</div> : null}
 
           <FloatingLabel controlId="floatingInput" label="New Password"   className="mb-3"  >
           <Form.Control  style={{width:300}} type="password" name='newPass' placeholder="......" onBlur={handleBlur} onChange={handleChange} value={values.newPass} /> 
@@ -91,7 +114,7 @@ function AdminProfile() {
  </div>
 </section>
  </div>
-</div>
+ </div>
     <Menu/>
     </>
     )
