@@ -45,6 +45,8 @@ function AdminLogin() {
                 }).then(res=>res.json()).then(result=>
                   {
                     console.log('success',result)
+                    localStorage.setItem('token',result.token)
+                    console.log(localStorage.getItem('token'))
                     navigate("/dashboard")
                   }).catch(err=>console.log(err.message))
 
@@ -79,7 +81,7 @@ function AdminLogin() {
         
            <div >
            
-                <h4  style={{marginLeft:'8%',marginTop:'5%',fontSize:20,fontWeight:'bold'}}>Forgot Password? <Link className='link' to='#forgotpass'>Click Here</Link></h4>
+                {/* <h4  style={{marginLeft:'8%',marginTop:'5%',fontSize:20,fontWeight:'bold'}}>Forgot Password? <Link className='link' to='#forgotpass'>Click Here</Link></h4> */}
            </div>
             </div>
                   <div className="right-side">

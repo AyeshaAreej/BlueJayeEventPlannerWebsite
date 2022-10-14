@@ -31,12 +31,12 @@ function AdminProfile() {
                 </h1>
               </div>
                     <Card  > <div style={{display: 'flex',  justifyContent:'center' , alignItems:'center', }}>
-                    <img style={{ borderRadius:25,marginBottom:"5%"}}  src={background}  width="200"  height="150" alt="Profile Pic" />
+                    {/* <img style={{ borderRadius:25,marginBottom:"5%"}}  src={background}  width="200"  height="150" alt="Profile Pic" /> */}
                     </div>
                     
        <Formik  
        initialValues={{
-       email:'',
+       
        password:'',
        newPass:'',}}
        onSubmit={ (values) => {
@@ -44,16 +44,19 @@ function AdminProfile() {
         
            
         const value = {
-                email: values.email,
-                password: values.password,
-                newPass:values.newPass
+             
+          old_password: values.password,
+          new_password:values.newPass
               }
+
+              const token = localStorage.getItem('token')
               fetch(`https://bluejay-mobile-app.herokuapp.com/admin/changePassword`,{
                 method: "post",
                 body: JSON.stringify(value),
                 headers: {
                     Accept: "application/json, text/plain, */*",
-                    "Content-Type": "application/json"
+                    "Content-Type": "application/json",
+                    token
                 }   
                 
                     
@@ -66,15 +69,13 @@ function AdminProfile() {
         }
         }
        validationSchema={Yup.object().shape({
-         email: Yup.string()
-        .email("Invalid email address format")
-        .required("Email is required"),
+        password: Yup.string()
+        .min(6, "Password must be 6 characters at minimum")
+        .required("Current Password is required"),
         newPass: Yup.string()
         .min(6, "Password must be 6 characters at minimum")
         .required("New Password is required"),
-        password: Yup.string()
-        .min(6, "Password must be 6 characters at minimum")
-        .required("Current Password is required") })}
+       })}
         >  
 
   {({ touched, errors,handleSubmit, handleBlur, values,handleChange }) =>( 
@@ -82,11 +83,11 @@ function AdminProfile() {
           <form onSubmit={handleSubmit} >  
  
          <div style={{display:'flex', justifyContent:'center',alignItems:'center', flexDirection:'column'}} >
-          <FloatingLabel controlId="floatingInput" label="Name"   className="mb-3"  >
+          {/* <FloatingLabel controlId="floatingInput" label="Name"   className="mb-3"  >
           <Form.Control style={{width:300}} type="email" name='email' placeholder="name@example.com" onBlur={handleBlur} onChange={handleChange} value={values.email} /> 
           </FloatingLabel>
           {touched.email && errors.email ? <div className='error' style={{  fontSize: 15, color: 'red', marginBottom:"2%"}}> {errors.email}</div> : null}
-        
+         */}
           <FloatingLabel controlId="floatingInput" label="Current Password"   className="mb-3"  >
           <Form.Control style={{width:300}} type="password" name='password' placeholder="......" onBlur={handleBlur} onChange={handleChange} value={values.password} /> 
           </FloatingLabel>

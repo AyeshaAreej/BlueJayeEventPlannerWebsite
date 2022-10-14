@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState,useEffect} from 'react'
 import Table from 'react-bootstrap/Table';
 import Menu from './Menu';
 import Header from './Header';
@@ -11,19 +11,91 @@ import Colors from '../components/Colors';
 function NewRegistrations() {
   
   const navigate = useNavigate();
+  const [regs, setRegs] = useState([]);
+  const [bool, setBool] = useState(false);
 
-const HandleClick=()=>{
-  navigate('/newCVDetails')
+  const token = localStorage.getItem('token')
 
-  // let role="vendor"
- 
-  // if (role==="company"){
-  // navigate('/CompanyDetails');
-  // }
-  // else if (role==="vendor"){
-  //   navigate('/VendorDetails');
-  // }
-}
+  useEffect(()=>{
+
+    getNewRegs();
+      
+   },[]);
+
+   const getNewRegs =()=>{
+    console.log('new regs',token)
+
+      fetch(`https://bluejay-mobile-app.herokuapp.com/admin/getNewRegs`,{
+                    method: "get",
+                    headers: {
+                        Accept: "application/json, text/plain, */*",
+                        "Content-Type": "application/json",
+                        token
+                    }
+                  
+              }).then(res=>res.json()).then(result=>{
+                // console.log(result)
+
+                if( result.status == 'ok'){
+                  setRegs(result.data)
+                  console.log(regs)
+                       
+                }
+              }).catch(err=>console.log('catch',err.message))
+   }
+
+   const approveCompany = (c_id)=>{
+
+    console.log('accept',token)
+    const value={c_id:c_id}
+
+    fetch(`https://bluejay-mobile-app.herokuapp.com/admin/acceptCompany`,{
+                  method: "post",
+                  body: JSON.stringify(value),
+                  headers: {
+                      Accept: "application/json, text/plain, */*",
+                      "Content-Type": "application/json",
+                      token
+                  }
+                
+            }).then(res=>res.json()).then(result=>{
+              console.log(result)
+
+              if( result.status == 'ok'){
+                getNewRegs()
+                     
+              }
+            }).catch(err=>console.log('catch',err.message))
+    
+
+   }
+
+   const rejectCompany = (c_id)=>{
+    console.log('reject',token)
+    
+    const value={c_id:c_id}
+
+    fetch(`https://bluejay-mobile-app.herokuapp.com/admin/rejectCompany`,{
+                  method: "post",
+                  body: JSON.stringify(value),
+                  headers: {
+                      Accept: "application/json, text/plain, */*",
+                      "Content-Type": "application/json",
+                      token
+                  }
+                
+            }).then(res=>res.json()).then(result=>{
+              console.log(result)
+
+              if( result.status == 'ok'){
+                getNewRegs()
+              }
+            }).catch(err=>console.log('catch',err.message))
+    
+
+  }
+
+
 
 
 
@@ -47,76 +119,42 @@ const HandleClick=()=>{
       <ul >
       <Table striped bordered hover variant="light">
         <thead style={{fontSize:15,fontWeight:'bold',color:Colors.primary}}>
+
         <tr   >
-          <th>#</th>
+          {/* <th>#</th> */}
           <th style={{width:'17%'}}>Business Name </th>
           <th style={{width:'20%'}}>Business Type</th>
           <th >City</th>
           <th style={{width:'17%'}}>Price Range</th>
           <th style={{width:'24%'}}>Services</th>
-          <th style={{width:'17%'}}>Date</th>
+          <th style={{width:'17%'}}>Available Hours</th>
           <th >Action</th>
           <th></th>
          
         </tr>
       </thead>
+
       <tbody style={{fontSize:13,fontWeight:'bold'}}>
-        <tr>
-          <td>1</td>
-          <td>Floral Weddings</td>
+
+
+  {regs.map((reg,i)=>{
+
+        return <tr key={reg._id}>
+          <td>{reg.company_name}</td>
           <td>Company</td>
-          <td>Islamabad</td>
-          <td>Above 1500000</td>
-          <td>Venue Decoration Photography Catering</td>
-          <td>16-8-2022</td>
+          <td>{reg.city}</td>
+          <td>{reg.price_range}</td>
+          <td>{reg.services}</td>
+          <td>{reg.available_hours}</td>
           <td>
-           <Button style={{width:80,margin:2}} variant="success">Accept</Button>
-           <Button style={{width:80,margin:2}}variant="danger">Reject</Button>
+          <Button style={{width:80,margin:2}} variant="success" onClick={()=>{approveCompany(reg._id)}}>Accept</Button>
+          <Button style={{width:80,margin:2}} variant="danger" onClick={()=>{rejectCompany(reg._id)}}>Reject</Button>
           </td>
-          <td><button style={{color:'blue' }}  onClick={HandleClick} >Details</button></td>
-         </tr>
-        <tr>
-          <td>2</td>
-          <td>Spice Foods</td>
-          <td>Vendor</td>
-          <td>Karachi</td>
-          <td>Above 100000</td>
-          <td>Catering</td>
-          <td>16-8-2022</td>
-          <td>
-           <Button style={{width:80,margin:2}} variant="success">Accept</Button>
-           <Button style={{width:80,margin:2}}variant="danger">Reject</Button>
-          </td>
-          <td><button style={{color:'blue' }}  onClick={HandleClick} >Details</button></td>
         </tr>
-        <tr>
-          <td>3</td>
-          <td>Royal Photographers</td>
-          <td>Vendor</td>
-          <td>Sukkur</td>
-          <td>Above 150000</td>
-          <td>Photography</td>
-          <td>16-8-2022</td>
-          <td>
-           <Button style={{width:80,margin:2}} variant="success">Accept</Button>
-           <Button style={{width:80,margin:2}}variant="danger">Reject</Button>
-          </td>
-          <td><button style={{color:'blue' }}  onClick={HandleClick} >Details</button></td>
-        </tr>
-        <tr>
-          <td>4</td>
-          <td>Cocktail Parties</td>
-          <td>Vendor</td>
-          <td>Islamabad</td>
-          <td>Above 600000</td>
-          <td>Venue</td>
-          <td>15-8-2022</td>
-          <td>
-           <Button style={{width:80,margin:2}} variant="success">Accept</Button>
-           <Button style={{width:80,margin:2}}variant="danger">Reject</Button>
-          </td>
-          <td><button style={{color:'blue', backgroundColor:'none' }}  onClick={HandleClick} >Details</button></td>
-        </tr>
+
+  })}
+
+
       </tbody>
     </Table>
  </ul>

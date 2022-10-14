@@ -41,7 +41,11 @@ export default class Header extends Component {
             <Dropdown.Item eventKey="1" href="/adminProfile" style={{fontSize:15}}>Profile</Dropdown.Item>
             <Dropdown.Item eventKey="2" href="/dashboard" style={{fontSize:15}}>Dashboard</Dropdown.Item>
             <Dropdown.Divider />
-            <Dropdown.Item eventKey="4"style={{fontSize:15}}>Log Out</Dropdown.Item>
+            <Dropdown.Item eventKey="4" href="/" onClick={()=>{
+              localStorage.setItem('token',' ')
+              console.log(localStorage.getItem('token'))
+              
+            }} style={{fontSize:15}}>Log Out</Dropdown.Item>
           
         </div>
       </li>
