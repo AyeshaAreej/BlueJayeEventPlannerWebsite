@@ -30,7 +30,7 @@ export default class Dashboard extends Component {
             {/* small box */}
             <div className="small-box bg-info">
               <div className="inner">
-                <h3>150</h3>
+                <h3>4</h3>
                 <p>New Requests</p>
               </div>
               <div className="icon">
@@ -44,7 +44,7 @@ export default class Dashboard extends Component {
             {/* small box */}
             <div className="small-box bg-success">
               <div className="inner">
-                <h3>53</h3>
+                <h3>15</h3>
                 <p>Registered Companies</p>
               </div>
               <div className="icon">
@@ -59,7 +59,7 @@ export default class Dashboard extends Component {
             {/* small box */}
             <div className="small-box bg-warning">
               <div className="inner">
-                <h3>65</h3>
+                <h3>17</h3>
                 <p>Registered Vendors</p>
               </div>
               <div className="icon">
@@ -74,7 +74,7 @@ export default class Dashboard extends Component {
             {/* small box */}
             <div className="small-box bg-danger">
               <div className="inner">
-                <h3>1000</h3>
+                <h3>100</h3>
                 <p>User Registrations</p>
               </div>
               <div className="icon">

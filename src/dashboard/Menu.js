@@ -9,7 +9,7 @@ export default class Menu extends Component {
       <aside className="main-sidebar sidebar-dark-primary elevation-4" style={{color:'#d176d0'}}>
          {/* Brand Logo */}
     <a href="index3.html" className="brand-link">
-      <img src="/images/logo2.1.png" alt="Logo" className="brand-image img-circle elevation-3" style={{opacity: '.8', fontSize:27}} />
+      <img src="/images/MainLogo.png" alt="Logo" className="brand-image img-circle elevation-3" style={{opacity: '.8', fontSize:27}} />
       <span className="brand-text font-weight-light">Admin Dashboard</span>
     </a>
     {/* Sidebar */}
